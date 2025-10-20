@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digimon Story Time Stranger</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div>
+            <div class="logo">
+                <img src="./img/DSTS_logo.webp" alt="">
+            </div>
+            <nav>
+                <a href="#">Features</a>
+                <a href="#">Gameplay</a>
+                <a href="#">Characters</a>
+                <a href="#">Demo</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="banner">
+            <div>
+                <h1>
+                    Digimon Story Time Stranger: An Epic Story of Connection
+                </h1>
+                <p class="hero-description">
+                    Take on a mission to uncover the mystery of the world's collapse, where chances encounters with unique characters will shape your journey across time and parallel worlds - and change fate itself.
+                </p>
+            </div>
+        </section>
+
+        <section class="trailer">
+            <div class="trailer-img"></div>
+
+            <div class="trailer-text">
+                <h2>Adventure Between Worlds and Time</h2>
+                <p>
+                    Journey between the parallel human world and the Digital World: Had where Digimon reside.
+                </p>
+                <p>
+                    See the Digital World and its intricately detailed realms like never before, with interactive elements and special quests to explore.
+                </p>
+                <button class="trailer">
+                    <p>Join Now!</p>
+                </button>
+            </div>
+        </section>
+
+        <section class="opinion">
+            <h2>Opinion</h2>
+            <div>
+                <form action="#" method="POST">
+                    <fieldset>
+                        <legend>USER DATA</legend>
+
+                        <div>
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" placeholder="Tu nombre o alias" required>
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="email@ejemplo.com" required>
+                        </div>
+                        <div>
+                            <label for="edad">Edad</label>
+                            <input type="number" id="edad" name="edad" placeholder="25" min="10" max="100">
+                        </div>
+                        <p>Plataforma Principal</p>
+                        <div>
+                            <input type="radio" id="pc" name="platform" value="pc" checked>
+                            <label for="pc">PC</label>
+                            <input type="radio" id="ps5" name="platform" value="ps5">
+                            <label for="ps5">PS5</label>
+                            <input type="radio" id="xbox-x" name="platform" value="xbox-x">
+                            <label for="xbox-x">Xbox Series X</label>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>ASSESSMENT</legend>
+
+                        <div>
+                            <label for="note">Note</label>
+                            <select id="note" name="note" required>
+                                <option value="perfect">Perfect</option>
+                                <option value="excellent">Great</option>
+                                <option value="good">Good</option>
+                                <option value="average">Bad</option>
+                                <option value="poor">Poor</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="comment">Comment</label>
+                            <br>
+                            <textarea id="comment" name="comment" placeholder="Write your opinion..." required></textarea>
+                        </div>
+                        <div>
+                            <button type="submit">Enviar Opinión</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p>Digimon Story Time Strange - 2025</p>
+        </div>
+    </footer>
+    <img src="./Digimon_2.png" class="copia" alt="">
+</body>
+</html>
