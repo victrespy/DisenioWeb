@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.copia{
+    width: 100%;
+}
+
+/*BODY*/
+body{
+    color: white;
+}
+
+/*HEADER*/
+header{
+    background-color: #205475;
+    padding: 10px 10%;
+}
+
+header > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    width: 20%;
+}
+
+nav{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+/*BANNER*/
+.banner{
+    background: url("./img/DSTS_header-desktop.png");
+    background-size: cover;
+    background-position: center center;
+    height: 50vh;
+    display: flex;
+    align-items: end;
+}
+
+.banner > div{
+    background-color: #205475c0;
+    text-align: center;
+    width: 100%;
+    padding: 30px 10%;
+}
+
+h1{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.banner p{
+    font-size: 1.2rem;
+    width: 75%;
+    margin: auto;
+}
+
+/*TRAILER*/
+.trailer{
+    color: black;
+    padding: 30px 10%;
+    display: flex;
+}
+
+.trailer-img{
+    background: url("./img/DSTS_PreorderTrailer_Thumbnail.png");
+    background-size: cover;
+    background-position: center center;
+    width: 65%;
+    aspect-ratio: 1.7/1;
+    border-radius: 20px;
+}
+
+.trailer-text{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 5% 0;
+}
+
+button.trailer{
+    width: 35%;
+    margin: auto;
+    text-align: center;
+    background-color: #205475;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.trailer p{
+    font-size: 1.2rem;
+    width: 75%;
+    margin: auto;
+}
+
+/*OPINION*/
+.opinion {
+    background-color: #205475;
+    padding: 50px 10%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.opinion > h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.opinion > div {
+    display: flex;
+    justify-content: center;
+}
+
+.opinion form {
+    display: flex;
+    gap: 2rem;
+    width: 60%;
+    max-width: 1200px;
+}
+
+.opinion legend {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    padding: 0 1rem;
+}
+
+.opinion fieldset {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+}
+
+.opinion form div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.opinion input[type="text"],
+.opinion input[type="email"],
+.opinion input[type="number"],
+.opinion select,
+.opinion textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    background-color: rgba(255, 255, 255, 0.568);
+    border: none;
+    border-radius: 5px;
+}
+
+.opinion textarea {
+    height: 150px;
+    resize: vertical;
+    padding: 5%;
+}
+
+.opinion label {
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.plataforma {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 1rem;
+    margin: 0.5rem 0;
+    label {
+        font-weight: normal;
+        font-size: medium;
+    }
+}
+
+.plataforma input[type="radio"] {
+    margin-right: 0.3rem;
+}
+
+.opinion button[type="submit"] {
+    background-color: rgba(255, 255, 255, 0.89);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.opinion button[type="submit"]:hover {
+    background-color: #0052a3;
+}
+
+.opinion p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    align-self: start;
+}
+
+/*FOOTER*/
+
+footer{
+    padding: 20px 10%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    p{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
