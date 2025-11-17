@@ -1,0 +1,168 @@
+/* COSAS GENERALES */
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Marcellus&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Arial', sans-serif;
+    background-color: #FFFFFF;
+}
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+
+/* HEADER */
+header {
+    background-color: #000000;
+    padding: 10px 20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+
+    nav{
+        display: flex;
+        justify-content: center;
+
+        div:nth-child(2){
+            width: 20%;
+        }
+    }
+
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    div{
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    li{
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
+
+#banner{    
+    height: 87vh;
+
+    .videoBackground {
+        /* Establece un contexto para el video */
+        position: absolute; /* O fixed si quieres que permanezca al hacer scroll */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 99%;
+        overflow: hidden; /* Oculta cualquier desbordamiento */
+        z-index: -1; /* Mueve el contenedor del video detrás de otros elementos */
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Asegura que el video cubra todo el contenedor */
+        }
+    }
+    
+    .gradient{
+        background-image: linear-gradient(180deg, #000000 10%, #D63A3A00 60%);
+        width: 100%;
+        height: 20%;
+    }
+
+    .bannerContent{
+        width: 60%;
+        margin: 30px auto;
+        text-align: center;
+        color: white;
+
+        h1{
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        p{
+            font-size: 1.5rem;
+        }
+
+        .boton{
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            border: solid 2px white;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;  
+            &:hover{
+                background-color: #ffffff;
+                color: #000000;
+            }
+        }
+    }
+
+    .bannerContent::before {
+        content: "";
+        display: block;
+        width: 60%;
+        border-radius: 10px;
+        height: 3px;
+        margin: 0 auto 20px auto;
+        background-color: white;
+    }
+}
+
+/* SABOR ARTESANO */
+#saborArtesano{
+    display: flex;
+    padding: 20vh 60px;
+
+    >div{
+        width: 50%;
+    }
+
+    div:nth-child(1){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 40px;
+
+        h2{
+            font-family: 'Marcellus', sans-serif;
+            font-weight: normal;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        h3{
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #c1955d;
+        }
+
+        p{
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+    }
+    div:nth-child(2){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
