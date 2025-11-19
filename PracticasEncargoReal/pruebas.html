@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horno San Miguel | Panadería Artesanal desde 1982</title>
+    
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- VARIABLES Y RESET --- */
+        :root {
+            --color-bg: #F9F7F2;
+            --color-text: #2C2C2C;
+            --color-accent: #800000;
+            --color-bread: #C68E17;
+            --color-muted: #8c8b88;
+            --color-white: #ffffff;
+            --color-black: #111111;
+            
+            --font-heading: 'Lora', serif;
+            --font-body: 'Montserrat', sans-serif;
+            
+            --spacing-section: 80px;
+            --border-radius: 4px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            /* Para evitar scroll horizontal con animaciones */
+            overflow-x: hidden; 
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        /* --- UTILIDADES --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .text-center { text-align: center; }
+        
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .dual-title {
+            display: block;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .dual-title span.sub {
+            display: block;
+            font-family: var(--font-body);
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--color-bread);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .dual-title span.main {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            color: var(--color-text);
+            position: relative;
+        }
+        .dual-title span.main::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: var(--color-accent);
+            margin: 15px auto 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: transparent;
+            border: 1px solid var(--color-text);
+            color: var(--color-text);
+            font-family: var(--font-body);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: var(--color-accent);
+            border-color: var(--color-accent);
+            color: var(--color-white);
+        }
+
+        .btn-primary {
+            background-color: var(--color-accent);
+            border-color: var(--color-accent);
+            color: var(--color-white);
+        }
+        .btn-primary:hover {
+            background-color: #5a0000;
+        }
+
+        .hero .btn-primary {
+            background-color: transparent;
+            border: 2px solid var(--color-white);
+            color: var(--color-white);
+            font-weight: 600;
+        }
+        
+        .hero .btn-primary:hover {
+            background-color: var(--color-accent);
+            border-color: var(--color-accent);
+            color: var(--color-white);
+        }
+
+        /* --- HEADER --- */
+        header {
+            padding: 10px 0;
+            background-color: var(--color-black);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 1001; /* Asegurar que el contenido del header esté sobre el menú móvil */
+            background-color: var(--color-black); /* Fondo sólido para cubrir el menú al deslizar */
+        }
+
+        .nav-group {
+            flex: 1;
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-left { justify-content: flex-end; padding-right: 60px; }
+        .nav-right { justify-content: flex-start; padding-left: 60px; }
+
+        .logo-container {
+            flex: 0 0 auto;
+            text-align: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--color-white);
+            text-decoration: none;
+            border-top: 2px solid var(--color-white);
+            border-bottom: 2px solid var(--color-white);
+            padding: 5px 10px; 
+            display: inline-block;
+            line-height: 1.2;
+        }
+        
+        .logo span {
+            display: block;
+            font-size: 0.65rem;
+            opacity: 0.8;
+        }
+
+        nav a {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 500;
+            color: var(--color-white);
+            opacity: 0.9;
+        }
+
+        nav a:hover {
+            color: var(--color-bread);
+            opacity: 1;
+        }
+
+        .mobile-toggle { 
+            display: none; 
+            font-size: 1.5rem; 
+            cursor: pointer; 
+            color: var(--color-white);
+            z-index: 1002; /* Siempre clickable */
+        }
+
+        /* --- MENÚ MÓVIL (NUEVO) --- */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--color-black);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            z-index: 999; /* Debajo del header (1000) */
+            padding-top: 60px; /* Espacio para no chocar con el logo */
+            
+            /* Animación */
+            transform: translateY(-100%); /* Oculto arriba */
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        .mobile-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .mobile-menu a {
+            color: var(--color-white);
+            font-size: 1.5rem;
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            position: relative;
+        }
+        
+        .mobile-menu a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: var(--color-bread);
+            transition: width 0.3s;
+            margin: 5px auto 0;
+        }
+        
+        .mobile-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* --- HERO --- */
+        .hero {
+            height: 85vh;
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=2072&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--color-white);
+            padding: 0 20px 100px 20px;
+            position: relative; 
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .badge-warning {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.6); 
+            backdrop-filter: blur(4px);
+            padding: 15px 20px;
+            font-size: 0.9rem;
+            text-align: center;
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            border-radius: 0;
+            margin-top: 0;
+            letter-spacing: 1px;
+            font-weight: 300;
+        }
+
+        /* --- PRODUCTOS --- */
+        .products-section {
+            padding: var(--spacing-section) 60px;
+        }
+
+        .product-filter {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .filter-btn {
+            border: none;
+            background: none;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            cursor: pointer;
+            color: var(--color-muted);
+            padding-bottom: 5px;
+            position: relative;
+        }
+
+        .filter-btn.active {
+            color: var(--color-accent);
+            font-weight: 600;
+        }
+        
+        .filter-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-accent);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--color-white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-card:hover .view-details {
+            text-decoration: none;
+        }
+
+        .product-image {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .allergen-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(255,255,255,0.9);
+            padding: 4px 8px;
+            font-size: 0.7rem;
+            color: var(--color-accent);
+            font-weight: 600;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .product-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .product-info h3 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+
+        .product-price {
+            color: var(--color-bread);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .product-desc-short {
+            font-size: 0.9rem;
+            color: var(--color-muted);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        
+        .view-details {
+            color: var(--color-accent);
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: auto;
+        }
+
+        /* --- HISTORIA --- */
+        .about-section {
+            background-color: #EBE5CE;
+            padding: var(--spacing-section) 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .about-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .about-images img {
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .about-images img:nth-child(odd) {
+            margin-top: 30px;
+        }
+
+        /* --- CONTACTO --- */
+        .contact-section {
+            padding: var(--spacing-section) 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-box {
+            background-color: var(--color-white);
+            padding: 40px;
+            border-top: 4px solid var(--color-accent);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            height: 100%;
+        }
+
+        .info-item {
+            margin-bottom: 35px;
+        }
+
+        .info-item h4 {
+            font-family: var(--font-heading);
+            color: var(--color-accent);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .contact-form input, .contact-form textarea, .contact-form select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            font-family: var(--font-body);
+            background-color: #fafafa;
+        }
+        
+        footer {
+            background-color: #1a1a1a;
+            color: #888;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        footer h3 { color: white; font-family: var(--font-heading); margin-bottom: 10px; }
+
+        /* --- MODAL --- */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 10px;
+        }
+        .modal.show { opacity: 1; }
+
+        .modal-content {
+            background-color: var(--color-white);
+            width: 100%;
+            max-width: 420px;
+            border-radius: 8px; 
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            overflow: hidden; 
+            padding: 0; 
+            display: flex;
+            flex-direction: column;
+            max-height: 95vh; 
+        }
+
+        .modal-header-img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 28px;
+            height: 28px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            cursor: pointer;
+            color: var(--color-text);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        .close-modal:hover { transform: scale(1.1); }
+
+        .modal-body {
+            padding: 15px 20px;
+        }
+
+        .modal-title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        .modal-title-row h2 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--color-text);
+            margin: 0;
+            line-height: 1.1;
+            flex: 1;
+            padding-right: 10px;
+        }
+        .modal-price {
+            color: var(--color-accent);
+            font-size: 1.2rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .modal-label {
+            font-weight: 700;
+            font-size: 0.75rem;
+            display: block;
+            margin-bottom: 2px;
+            color: var(--color-text);
+            text-transform: uppercase;
+            opacity: 0.7;
+        }
+        
+        .modal-text {
+            color: #555;
+            margin-bottom: 12px;
+            line-height: 1.3;
+            font-size: 0.9rem;
+        }
+
+        .modal-grid-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 12px;
+        }
+
+        .modal-allergens-footer {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .modal-allergens-label {
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            color: #999;
+            letter-spacing: 1px;
+        }
+        .modal-allergen-pill {
+            background-color: #FDE68A; 
+            color: #78350F; 
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 900px) {
+            .header-inner { flex-direction: column; gap: 15px; }
+            .nav-group { width: 100%; justify-content: center; padding: 0; gap: 15px; }
+            .nav-left { order: 2; }
+            .nav-right { order: 3; }
+            .logo-container { order: 1; margin-bottom: 10px; }
+            
+            .hero-content h1 { font-size: 2.5rem; }
+            .about-grid, .contact-grid { grid-template-columns: 1fr; }
+            .about-images { order: -1; }
+        }
+
+        @media (max-width: 600px) {
+            .nav-group { display: none; } 
+            .header-inner { flex-direction: row; justify-content: space-between; padding: 0 20px;}
+            .logo-container { margin: 0; border: none; }
+            .mobile-toggle { display: block; }
+            
+            .section-title { font-size: 2rem; }
+            .dual-title span.main { font-size: 2rem; }
+
+            /* Ajustes Modal en Móvil */
+            .modal-header-img { height: 120px; } 
+            .modal-title-row h2 { font-size: 1.2rem; }
+            .modal-price { font-size: 1.1rem; }
+            .modal-body { padding: 15px; }
+            .modal-text { font-size: 0.85rem; margin-bottom: 10px; }
+            .modal-grid-info { gap: 10px; margin-bottom: 10px; padding-bottom: 10px; }
+            
+            /* Ajuste productos en móvil para que no queden pegados */
+            .products-section { padding: 60px 20px; }
+        }
+
+        /* CAMBIO: Ajuste específico para pantallas muy estrechas (< 430px) */
+        @media (max-width: 430px) {
+            .logo {
+                font-size: 1.3rem; /* Reducido de 1.8rem */
+                padding: 3px 6px;  /* Padding más ajustado */
+                border-width: 1px; /* Bordes más finos para que no pesen tanto visualmente */
+                letter-spacing: 0.5px;
+            }
+            .logo span {
+                font-size: 0.5rem; /* Subtítulo más pequeño */
+                letter-spacing: 1px;
+                margin-top: 2px;
+            }
+            .header-inner {
+                padding: 0 15px; /* Un poco menos de padding lateral en el header */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="mobile-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <nav class="nav-group nav-left">
+                <a href="#productos">Obrador</a>
+                <a href="#historia">Historia</a>
+            </nav>
+
+            <div class="logo-container">
+                <a href="#" class="logo">
+                    Horno San Miguel
+                    <span>DESDE 1982</span>
+                </a>
+            </div>
+
+            <nav class="nav-group nav-right">
+                <a href="#faq">Dudas</a>
+                <a href="#contacto">Encargos</a>
+            </nav>
+        </div>
+
+        <!-- MENÚ MÓVIL (Oculto por defecto, se desliza con JS) -->
+        <div id="mobileMenu" class="mobile-menu">
+            <a href="#productos" onclick="toggleMenu()">Obrador</a>
+            <a href="#historia" onclick="toggleMenu()">Historia</a>
+            <a href="#faq" onclick="toggleMenu()">Dudas</a>
+            <a href="#contacto" onclick="toggleMenu()">Encargos</a>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Pan de verdad,<br>cada mañana.</h1>
+            <p>Tradición, masa madre y tiempo. El sabor de lo artesanal.</p>
+            <a href="#productos" class="btn btn-primary">Ver productos del día</a>
+        </div>
+        
+        <div class="badge-warning">
+            <i class="fas fa-clock"></i> Horneamos de madrugada, puede haber variaciones en el stock.
+        </div>
+    </section>
+
+    <section id="productos" class="products-section container">
+        <div class="dual-title">
+            <span class="sub">Nuestro Mostrador</span>
+            <span class="main">Especialidades Diarias</span>
+        </div>
+
+        <div class="product-filter">
+            <button class="filter-btn active" onclick="filterProducts('todos')">Todos</button>
+            <button class="filter-btn" onclick="filterProducts('pan')">Panes</button>
+            <button class="filter-btn" onclick="filterProducts('bolleria')">Bollería</button>
+            <button class="filter-btn" onclick="filterProducts('salado')">Salados</button>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+            <!-- Producto 1 -->
+            <article class="product-card" data-category="pan" onclick="openModal('https://images.unsplash.com/photo-1549931319-a545dcf3bc73?q=80&w=2070&auto=format&fit=crop', 'Hogaza de Campaña', '3.50€', 'Harina de trigo, agua, masa madre y sal.', '850g aprox', 'Ideal para tostas de desayuno o acompañar guisos fuertes.', 'Gluten')">
+                <div class="product-image">
+                    <span class="allergen-tag">Contiene Gluten</span>
+                    <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?q=80&w=2070&auto=format&fit=crop" alt="Hogaza Madre">
+                </div>
+                <div class="product-info">
+                    <h3>Hogaza de Campaña</h3>
+                    <div class="product-price">3.50€ / ud</div>
+                    <p class="product-desc-short">Nuestra joya. Masa madre de cultivo propio y 24h de fermentación.</p>
+                    <span class="view-details">Ver Detalles</span>
+                </div>
+            </article>
+
+            <!-- Producto 2 -->
+            <article class="product-card" data-category="bolleria" onclick="openModal('https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1926&auto=format&fit=crop', 'Croissant de Mantequilla', '1.80€', 'Harina de fuerza, mantequilla 82% M.G., azúcar, huevos.', '90g aprox', 'Consumir en el día. No calentar en microondas.', 'Gluten, Lácteos, Huevo')">
+                <div class="product-image">
+                    <span class="allergen-tag">Gluten / Lácteos</span>
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1926&auto=format&fit=crop" alt="Croissant">
+                </div>
+                <div class="product-info">
+                    <h3>Croissant de Mantequilla</h3>
+                    <div class="product-price">1.80€ / ud</div>
+                    <p class="product-desc-short">Hojaldrado manual con mantequilla de Normandía.</p>
+                    <span class="view-details">Ver Detalles</span>
+                </div>
+            </article>
+
+            <!-- Producto 3 -->
+            <article class="product-card" data-category="salado" onclick="openModal('https://images.unsplash.com/photo-1621251804233-0695f9b6d5d4?q=80&w=2070&auto=format&fit=crop', 'Empanada de Atún', '18.00€/kg', 'Harina, aceite de oliva, tomate, pimiento, cebolla, atún.', 'Venta al peso', 'Perfecta fría o con un golpe de horno.', 'Gluten, Huevo, Pescado')">
+                <div class="product-image">
+                    <span class="allergen-tag">Gluten / Huevo</span>
+                    <img src="https://images.unsplash.com/photo-1621251804233-0695f9b6d5d4?q=80&w=2070&auto=format&fit=crop" alt="Empanada">
+                </div>
+                <div class="product-info">
+                    <h3>Empanada de Atún</h3>
+                    <div class="product-price">18.00€ / kg</div>
+                    <p class="product-desc-short">Masa fina crujiente con pisto casero y atún del norte.</p>
+                    <span class="view-details">Ver Detalles</span>
+                </div>
+            </article>
+            
+             <!-- Producto 4 -->
+             <article class="product-card" data-category="pan" onclick="openModal('https://images.unsplash.com/photo-1586444248902-2f64eddc13df?q=80&w=2070&auto=format&fit=crop', 'Barra de Semillas', '1.20€', 'Harina integral, lino, sésamo, pipas de girasol.', '250g aprox', 'Bocadillos saludables.', 'Gluten, Sésamo')">
+                <div class="product-image">
+                    <span class="allergen-tag">Gluten / Semillas</span>
+                    <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?q=80&w=2070&auto=format&fit=crop" alt="Pan Semillas">
+                </div>
+                <div class="product-info">
+                    <h3>Barra de Semillas</h3>
+                    <div class="product-price">1.20€ / ud</div>
+                    <p class="product-desc-short">Crujiente por fuera, miga húmeda y mix de 5 semillas.</p>
+                    <span class="view-details">Ver Detalles</span>
+                </div>
+            </article>
+
+            <!-- Producto 5 -->
+            <article class="product-card" data-category="pan" onclick="openModal('https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=2072&auto=format&fit=crop', 'Pan de Centeno 100%', '4.00€', 'Harina de centeno integral, agua, masa madre y sal.', '900g aprox', 'Ideal para ahumados y quesos fuertes.', 'Gluten')">
+                <div class="product-image">
+                    <span class="allergen-tag">Gluten</span>
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=2072&auto=format&fit=crop" alt="Pan Centeno">
+                </div>
+                <div class="product-info">
+                    <h3>Pan de Centeno 100%</h3>
+                    <div class="product-price">4.00€ / ud</div>
+                    <p class="product-desc-short">Miga densa, oscura y de sabor intenso. Larga conservación.</p>
+                    <span class="view-details">Ver Detalles</span>
+                </div>
+            </article>
+
+            <!-- Producto 6 -->
+            <article class="product-card" data-category="bolleria" onclick="openModal('https://images.unsplash.com/photo-1587250146370-601da4c759d3?q=80&w=2000&auto=format&fit=crop', 'Napolitana Chocolate', '1.90€', 'Harina, mantequilla, chocolate negro 70%, azúcar.', '110g aprox', 'La merienda clásica, mejorada.', 'Gluten, Lácteos, Soja')">
+                <div class="product-image">
+                    <span class="allergen-tag">Gluten / Lácteos / Soja</span>
+                    <img src="https://images.unsplash.com/photo-1587250146370-601da4c759d3?q=80&w=2000&auto=format&fit=crop" alt="Napolitana Chocolate">
+                </div>
+                <div class="product-info">
+                    <h3>Napolitana Chocolate</h3>
+                    <div class="product-price">1.90€ / ud</div>
+                    <p class="product-desc-short">Hojaldre crujiente relleno de chocolate negro puro.</p>
+                    <span class="view-details">Ver Detalles</span>
+                </div>
+            </article>
+
+            <!-- Producto 7 -->
+            <article class="product-card" data-category="salado" onclick="openModal('https://images.unsplash.com/photo-1615557960916-5f4791effe9d?q=80&w=2000&auto=format&fit=crop', 'Quiche de Espinacas', '3.50€', 'Harina, mantequilla, huevo, nata, espinacas, queso de cabra.', '200g / porción', 'Almuerzo ligero o cena rápida.', 'Gluten, Lácteos, Huevo')">
+                <div class="product-image">
+                    <span class="allergen-tag">Gluten / Lácteos / Huevo</span>
+                    <img src="https://images.unsplash.com/photo-1615557960916-5f4791effe9d?q=80&w=2000&auto=format&fit=crop" alt="Quiche">
+                </div>
+                <div class="product-info">
+                    <h3>Quiche de Espinacas</h3>
+                    <div class="product-price">3.50€ / porción</div>
+                    <p class="product-desc-short">Base quebrada casera con queso de cabra y espinacas frescas.</p>
+                    <span class="view-details">Ver Detalles</span>
+                </div>
+            </article>
+
+            <!-- Producto 8 -->
+            <article class="product-card" data-category="bolleria" onclick="openModal('https://images.unsplash.com/photo-1600431562968-69f9c898734d?q=80&w=2000&auto=format&fit=crop', 'Palmeritas Glaseadas', '15.00€/kg', 'Harina, mantequilla, azúcar.', 'Venta al peso', 'Perfectas para acompañar el café.', 'Gluten, Lácteos')">
+                <div class="product-image">
+                    <span class="allergen-tag">Gluten / Lácteos</span>
+                    <img src="https://images.unsplash.com/photo-1600431562968-69f9c898734d?q=80&w=2000&auto=format&fit=crop" alt="Palmeritas">
+                </div>
+                <div class="product-info">
+                    <h3>Palmeritas Glaseadas</h3>
+                    <div class="product-price">15.00€ / kg</div>
+                    <p class="product-desc-short">Pequeños bocados de hojaldre caramelizado al horno.</p>
+                    <span class="view-details">Ver Detalles</span>
+                </div>
+            </article>
+        </div>
+        
+        <div class="text-center" style="margin-top: 40px;">
+            <p class="text-muted"><em>* Aviso: Consulta en tienda si tienes alergias severas. Indicamos los más comunes.</em></p>
+        </div>
+    </section>
+
+    <section id="historia" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745a30bf?q=80&w=2070&auto=format&fit=crop" alt="Manos amasando">
+                    <img src="https://images.unsplash.com/photo-1615838980626-e46d92a40981?q=80&w=1974&auto=format&fit=crop" alt="Horno antiguo">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=2072&auto=format&fit=crop" alt="Harina">
+                    <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcf8?q=80&w=2080&auto=format&fit=crop" alt="Cesta">
+                </div>
+                <div class="about-text">
+                    <div class="dual-title" style="text-align: left;">
+                        <span class="sub">Nuestra Esencia</span>
+                        <span class="main" style="font-size: 2.2rem;">Maestros desde 1982</span>
+                    </div>
+                    <p>Todo empezó con el abuelo Diego Martín y un pequeño horno de leña. Hoy, tres generaciones después, en <strong>Horno San Miguel</strong> seguimos respetando los tiempos que el pan necesita.</p>
+                    <p>Utilizamos masa madre de cultivo propio alimentada a diario. Sin aditivos, sin prisas y con harinas molidas a la piedra. Porque creemos que el pan de verdad es aquel que alimenta y reconforta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="faq" class="container" style="padding: 60px 20px;">
+        <h2 class="section-title" style="color: var(--color-accent); font-size: 1.8rem;">Preguntas Frecuentes</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <details style="margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
+                <summary style="cursor: pointer; font-weight: bold; color: var(--color-text);">¿Aceptáis encargos?</summary>
+                <p style="margin-top: 10px; color: #666;">Sí, especialmente para celebraciones. Llámanos con 24h de antelación.</p>
+            </details>
+            <details style="margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
+                <summary style="cursor: pointer; font-weight: bold; color: var(--color-text);">¿Cómo caliento el pan en casa?</summary>
+                <p style="margin-top: 10px; color: #666;">Rocía un poco de agua sobre la corteza y hornéalo a 180ºC durante 5 minutos.</p>
+            </details>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact-section">
+        <div class="container">
+             <div class="dual-title">
+                <span class="sub">Visítanos</span>
+                <span class="main">Contacto y Horarios</span>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-box">
+                    <div class="info-item">
+                        <h4><i class="far fa-clock"></i> Horario</h4>
+                        <p><strong>Lunes a Viernes:</strong><br>7:00 – 14:30 / 17:30 – 20:00</p>
+                        <p style="margin-top: 10px;"><strong>Sábados:</strong><br>7:30 – 14:30</p>
+                    </div>
+                    <div class="info-item" style="margin-bottom: 0;">
+                        <h4><i class="fas fa-map-marker-alt"></i> Dirección</h4>
+                        <p>Plaza Mayor 8, 28000.<br>Madrid.</p>
+                    </div>
+                </div>
+                
+                <div class="contact-box">
+                    <form class="contact-form">
+                        <h4 style="font-family: var(--font-heading); color: var(--color-accent); margin-bottom: 20px; font-size: 1.2rem;">Haz un encargo</h4>
+                        <input type="text" placeholder="Tu nombre">
+                        <input type="tel" placeholder="Teléfono">
+                        <select>
+                            <option>Panes</option>
+                            <option>Pastelería</option>
+                            <option>Consulta General</option>
+                        </select>
+                        <button type="button" class="btn btn-primary" style="width: 100%;">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3>HORNO SAN MIGUEL</h3>
+            <p>&copy; 2025 Panadería Artesanal. Todos los derechos reservados.</p>
+            <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.6;">Diseño Web inspirado en Malamiga.</p>
+        </div>
+    </footer>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()"><i class="fas fa-times"></i></span>
+            <img id="modalImage" src="" alt="Producto Detalle" class="modal-header-img">
+            <div class="modal-body">
+                <div class="modal-title-row">
+                    <h2 id="modalTitle">Título</h2>
+                    <div id="modalPrice" class="modal-price">0.00€</div>
+                </div>
+
+                <span class="modal-label">Ingredientes:</span>
+                <p id="modalIngredients" class="modal-text">Harina, agua...</p>
+                
+                <div class="modal-grid-info">
+                    <div>
+                        <span class="modal-label">Peso:</span>
+                        <p id="modalWeight" style="margin:0;">000g</p>
+                    </div>
+                    <div>
+                        <span class="modal-label">Recomendación:</span>
+                        <p id="modalRecommendation" style="margin:0;">...</p>
+                    </div>
+                </div>
+
+                <div class="modal-allergens-footer">
+                    <span class="modal-allergens-label">ALÉRGENOS:</span>
+                    <div id="modalAllergensContainer" style="display:flex; gap:8px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('productModal');
+        
+        function openModal(imageSrc, title, price, ingredients, weight, recommendation, allergens) {
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalPrice').innerText = price;
+            document.getElementById('modalIngredients').innerText = ingredients;
+            document.getElementById('modalWeight').innerText = weight;
+            document.getElementById('modalRecommendation').innerText = recommendation;
+            
+            const allergensContainer = document.getElementById('modalAllergensContainer');
+            allergensContainer.innerHTML = ''; 
+            
+            if(allergens) {
+                const allergenList = allergens.split(',').map(a => a.trim());
+                allergenList.forEach(allergen => {
+                    const pill = document.createElement('span');
+                    pill.className = 'modal-allergen-pill';
+                    pill.innerText = allergen;
+                    allergensContainer.appendChild(pill);
+                });
+            } else {
+                const pill = document.createElement('span');
+                pill.style.fontSize = "0.8rem";
+                pill.innerText = "Ninguno declarado";
+                allergensContainer.appendChild(pill);
+            }
+
+            modal.style.display = "flex";
+            setTimeout(() => {
+                modal.classList.add('show');
+            }, 10);
+        }
+
+        function closeModal() {
+            modal.classList.remove('show');
+            setTimeout(() => {
+                modal.style.display = "none";
+            }, 300); 
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        function filterProducts(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.innerText.toLowerCase().includes(category) || (category === 'todos' && btn.innerText === 'Todos')) {
+                    // Visual match
+                }
+            });
+            
+            event.target.classList.add('active'); 
+            let siblings = event.target.parentNode.children;
+            for(let sib of siblings) {
+                if(sib !== event.target) sib.classList.remove('active');
+            }
+
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                if (category === 'todos' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+        
+        // --- FUNCIÓN MENÚ MÓVIL ACTUALIZADA ---
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.querySelector('.mobile-toggle i');
+            
+            // Toggle clase activo en menú
+            menu.classList.toggle('active');
+            
+            // Cambiar icono
+            if(menu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
+    </script>
+</body>
+</html>
