@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casos de uso Nova IA</title>
+    <style>
+        /* Reset básico */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #020617; /* Fondo oscuro profundo */
+            color: #e2e8f0;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        /* Contenedor Principal */
+        .main-container {
+            max-width: 1400px;
+            width: 100%;
+        }
+
+        /* Header (Flexbox es mejor aquí para alinear extremos, pero el grid es para las cartas) */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .header-text h1 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .header-text p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            max-width: 600px;
+        }
+
+        .sort-dropdown {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            color: #cbd5e1;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        /* --- AQUÍ ESTÁ LA MAGIA DEL GRID --- */
+        .grid-layout {
+            display: grid;
+            /* EL TRUCO SIN MEDIA QUERIES:
+               auto-fit: Rellena la fila con tantas columnas como quepan.
+               minmax(280px, 1fr): Cada columna debe medir AL MENOS 280px. 
+               Si hay espacio de sobra, crecen (1fr) para ocuparlo todo.
+            */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 24px; /* Espacio entre celdas */
+        }
+
+        /* Estilos de la Tarjeta (Card) */
+        .card {
+            background-color: #0f172a; /* Azul oscuro tarjeta */
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            border-color: #3b82f6;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 160px;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #f8fafc;
+        }
+
+        .card p {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            flex-grow: 1; /* Empuja el footer hacia abajo si hay poco texto */
+        }
+
+        /* Footer de la tarjeta */
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .tag {
+            border: 1px solid #334155;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: #cbd5e1;
+        }
+
+        .link {
+            color: #60a5fa;
+            font-size: 0.85rem;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .link:hover {
+            text-decoration: underline;
+        }
+
+        /* BORRAMOS LAS MEDIA QUERIES POR COMPLETO */
+        /* El grid ahora se ajusta solo gracias al auto-fit */
+        
+    </style>
+</head>
+<body>
+
+    <main class="main-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-text">
+                <h1>Casos de uso de Nova IA</h1>
+                <p>Plantillas y ejemplos para acelerar flujos de trabajo: desde marketing y diseño hasta análisis y automatización.</p>
+            </div>
+            <div class="header-controls">
+                <label for="sort" style="font-size: 0.9rem; color: #94a3b8; margin-right: 10px;">Ordenar por:</label>
+                <select id="sort" class="sort-dropdown">
+                    <option>Más populares</option>
+                    <option>Más recientes</option>
+                </select>
+            </div>
+        </header>
+
+        <!-- Grid Container -->
+        <section class="grid-layout">
+            
+            <!-- Card 1 -->
+            <article class="card">
+                <div class="card-image">
+                   <!-- Placeholder visual para simular la imagen "cerebro chip" -->
+                   <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=500&q=60" alt="IA Art">
+                </div>
+                <h3>Asistente de escritura</h3>
+                <p>Genera artículos, resúmenes y copys optimizados. Ajusta tono y longitud con parámetros sencillos.</p>
+                <div class="card-footer">
+                    <span class="tag">Contenido</span>
+                    <a href="#" class="link">Ver detalle →</a>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1617791160505-6f00504e3519?auto=format&fit=crop&w=500&q=60" alt="Generador">
+                </div>
+                <h3>Generador de imágenes</h3>
+                <p>Crea ilustraciones y mockups a partir de prompts textuales. Control de estilo, color y composición.</p>
+                <div class="card-footer">
+                    <span class="tag">Creatividad</span>
+                    <a href="#" class="link">Ver detalle →</a>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=60" alt="Analítica">
+                </div>
+                <h3>Analítica rápida</h3>
+                <p>Resume datasets, detecta tendencias y genera insights accionables en lenguaje claro.</p>
+                <div class="card-footer">
+                    <span class="tag">Datos</span>
+                    <a href="#" class="link">Ver detalle →</a>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?auto=format&fit=crop&w=500&q=60" alt="Automatización">
+                </div>
+                <h3>Automatización de tareas</h3>
+                <p>Genera secuencias y scripts para automatizar procesos repetitivos y ahorrar tiempo.</p>
+                <div class="card-footer">
+                    <span class="tag">Productividad</span>
+                    <a href="#" class="link">Ver detalle →</a>
+                </div>
+            </article>
+
+            <!-- Card 5 (Repetición fila 2) -->
+            <article class="card">
+                <div class="card-image">
+                     <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=500&q=60" alt="IA Art">
+                </div>
+                <h3>Asistente de escritura</h3>
+                <p>Genera artículos, resúmenes y copys optimizados. Ajusta tono y longitud con parámetros sencillos.</p>
+                <div class="card-footer">
+                    <span class="tag">Contenido</span>
+                    <a href="#" class="link">Ver detalle →</a>
+                </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1617791160505-6f00504e3519?auto=format&fit=crop&w=500&q=60" alt="Generador">
+                </div>
+                <h3>Generador de imágenes</h3>
+                <p>Crea ilustraciones y mockups a partir de prompts textuales. Control de estilo, color y composición.</p>
+                <div class="card-footer">
+                    <span class="tag">Creatividad</span>
+                    <a href="#" class="link">Ver detalle →</a>
+                </div>
+            </article>
+
+            <!-- Card 7 -->
+            <article class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=60" alt="Analítica">
+                </div>
+                <h3>Analítica rápida</h3>
+                <p>Resume datasets, detecta tendencias y genera insights accionables en lenguaje claro.</p>
+                <div class="card-footer">
+                    <span class="tag">Datos</span>
+                    <a href="#" class="link">Ver detalle →</a>
+                </div>
+            </article>
+
+            <!-- Card 8 -->
+            <article class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?auto=format&fit=crop&w=500&q=60" alt="Automatización">
+                </div>
+                <h3>Automatización de tareas</h3>
+                <p>Genera secuencias y scripts para automatizar procesos repetitivos y ahorrar tiempo.</p>
+                <div class="card-footer">
+                    <span class="tag">Productividad</span>
+                    <a href="#" class="link">Ver detalle →</a>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+</body>
+</html>
