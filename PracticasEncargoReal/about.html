@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horno San Miguel | Panadería Artesanal desde 1982</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="mobile-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <nav class="nav-group nav-left">
+                <a href="#productos">Obrador</a>
+                <a href="#historia">Historia</a>
+            </nav>
+
+            <div class="logo-container">
+                <a href="#" class="logo">
+                    Horno San Miguel
+                    <span>DESDE 1982</span>
+                </a>
+            </div>
+
+            <nav class="nav-group nav-right">
+                <a href="#faq">Dudas</a>
+                <a href="#contacto">Encargos</a>
+            </nav>
+        </div>
+
+        <!-- Menu movil -->
+        <div id="mobileMenu" class="mobile-menu">
+            <a href="#productos" onclick="toggleMenu()">Obrador</a>
+            <a href="#historia" onclick="toggleMenu()">Historia</a>
+            <a href="#faq" onclick="toggleMenu()">Dudas</a>
+            <a href="#contacto" onclick="toggleMenu()">Encargos</a>
+        </div>
+    </header>
+
+    <main>
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <h3>HORNO SAN MIGUEL</h3>
+            <p>&copy; 2025 Panadería Artesanal. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()"><i class="fas fa-times"></i></span>
+            <img id="modalImage" src="" alt="Producto Detalle" class="modal-header-img">
+            <div class="modal-body">
+                <div class="modal-title-row">
+                    <h2 id="modalTitle">Título</h2>
+                    <div id="modalPrice" class="modal-price">0.00€</div>
+                </div>
+
+                <span class="modal-label">Ingredientes:</span>
+                <p id="modalIngredients" class="modal-text">Harina, agua...</p>
+                
+                <div class="modal-grid-info">
+                    <div>
+                        <span class="modal-label">Peso:</span>
+                        <p id="modalWeight" style="margin:0;">000g</p>
+                    </div>
+                    <div>
+                        <span class="modal-label">Recomendación:</span>
+                        <p id="modalRecommendation" style="margin:0;">...</p>
+                    </div>
+                </div>
+
+                <div class="modal-allergens-footer">
+                    <span class="modal-allergens-label">ALÉRGENOS:</span>
+                    <div id="modalAllergensContainer" style="display:flex; gap:8px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
