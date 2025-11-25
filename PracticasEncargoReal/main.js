@@ -1,4 +1,10 @@
 const modal = document.getElementById('productModal');
+
+const backgroundMask = document.getElementById('inicio');
+
+document.addEventListener('DOMContentLoaded', () => {
+    backgroundMask.classList.add('unlocked');
+});
         
         function openModal(imageSrc, title, price, ingredients, weight, recommendation, allergens) {
             document.getElementById('modalImage').src = imageSrc;

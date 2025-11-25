@@ -23,12 +23,39 @@
     padding: 0;
 }
 
+html {
+    background-color: var(--negro);
+}
+
 body {
     font-family: var(--fuenteSecundaria);
     background-color: var(--colorFondo);
     color: var(--colorTexto);
     line-height: 1.6;
-    overflow-x: hidden; 
+    overflow-x: hidden;
+}
+
+#inicio{
+    /*mascara*/
+    mask-image: url(img/bread-mask.png);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 50px;
+
+    &.unlocked{
+        animation: reveal 7s forwards ease-in-out;
+    }
+}
+
+
+
+@keyframes reveal {
+    0%{
+        mask-size: 50px;
+    }
+    100%{
+        mask-size: 1000vw;
+    }
 }
 
 a {
