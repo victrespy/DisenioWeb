@@ -176,8 +176,14 @@ header {
     gap: 40px;
 }
 
-.nav-left { justify-content: flex-end; padding-right: 60px; }
-.nav-right { justify-content: flex-start; padding-left: 60px; }
+.nav-left { 
+    justify-content: flex-end;
+    padding-right: 60px; 
+}
+.nav-right { 
+    justify-content: flex-start; 
+    padding-left: 60px; 
+}
 
 .logo-container {
     flex: 0 0 auto;
