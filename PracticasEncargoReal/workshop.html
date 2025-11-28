@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escuela de Pan | Horno San Miguel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="mobile-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <nav class="nav-group nav-left">
+                <a href="products.html">Obrador</a>
+                <a href="about.html">Historia</a>
+            </nav>
+
+            <div class="logo-container">
+                <a href="home.html" class="logo">
+                    Horno San Miguel
+                    <span>DESDE 1982</span>
+                </a>
+            </div>
+
+            <nav class="nav-group nav-right">
+                <a href="home.html#faq">Dudas</a>
+                <a href="home.html#contacto">Encargos</a>
+            </nav>
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu">
+            <a href="home.html" onclick="toggleMenu()">Inicio</a>
+            <a href="products.html" onclick="toggleMenu()">Obrador</a>
+            <a href="talleres.html" onclick="toggleMenu()">Escuela</a>
+            <a href="about.html" onclick="toggleMenu()">Historia</a>
+            <a href="home.html#contacto" onclick="toggleMenu()">Encargos</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero-workshops">
+            <div class="hero-content">
+                <h1>Escuela de Pan</h1>
+                <p>Manchate las manos de harina y aprende el oficio.</p>
+            </div>
+            <div class="badge-warning"></div>
+        </section>
+
+        <section class="container text-center" style="padding: 60px 20px;">
+            <div class="dual-title">
+                <span class="sub">Comparte nuestra pasión</span>
+                <span class="main">Cursos Presenciales</span>
+            </div>
+            <p style="max-width: 800px; margin: 0 auto; color: var(--gris);">
+                Impartimos talleres de fin de semana para grupos reducidos (máximo 8 personas). 
+                Incluyen todo el material, delantal de regalo y te llevarás a casa todo lo que hornees.
+            </p>
+        </section>
+
+        <section class="container" style="padding-bottom: 80px;">
+            <div class="workshop-grid">
+                
+                <article class="workshop-card">
+                    <div class="ws-date">
+                        <span class="day">15</span>
+                        <span class="month">NOV</span>
+                    </div>
+                    <div class="ws-image">
+                        <img src="img/banner.webp" alt="Taller Iniciación">
+                    </div>
+                    <div class="ws-content">
+                        <div class="ws-meta">
+                            <span><i class="fas fa-clock"></i> 09:00 - 14:00</span>
+                            <span><i class="fas fa-signal"></i> Iniciación</span>
+                        </div>
+                        <h3>Iniciación al Pan Casero</h3>
+                        <p>Aprende las bases: harinas, amasado a mano y horneado en casa. Haremos hogaza básica y panecillos.</p>
+                        <div class="ws-footer">
+                            <span class="price">60€</span>
+                            <a href="#inscripcion" class="btn btn-primary">Reservar Plaza</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="workshop-card">
+                    <div class="ws-date">
+                        <span class="day">22</span>
+                        <span class="month">NOV</span>
+                    </div>
+                    <div class="ws-image">
+                        <img src="img/pan-centeno.avif" alt="Taller Masa Madre">
+                    </div>
+                    <div class="ws-content">
+                        <div class="ws-meta">
+                            <span><i class="fas fa-clock"></i> 09:00 - 15:00</span>
+                            <span><i class="fas fa-signal"></i> Intermedio</span>
+                        </div>
+                        <h3>Todo sobre la Masa Madre</h3>
+                        <p>Crea tu propio fermento desde cero, mantenlo vivo y aprende a usarlo en panes de larga fermentación.</p>
+                        <div class="ws-footer">
+                            <span class="price">75€</span>
+                            <a href="#inscripcion" class="btn btn-primary">Reservar Plaza</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="workshop-card">
+                    <div class="ws-date">
+                        <span class="day">29</span>
+                        <span class="month">NOV</span>
+                    </div>
+                    <div class="ws-image">
+                        <img src="img/croassant-mantequilla.avif" alt="Taller Hojaldre">
+                    </div>
+                    <div class="ws-content">
+                        <div class="ws-meta">
+                            <span><i class="fas fa-clock"></i> 09:00 - 14:00</span>
+                            <span><i class="fas fa-signal"></i> Avanzado</span>
+                        </div>
+                        <h3>Bollería y Hojaldre</h3>
+                        <p>La técnica del laminado ya no será un secreto. Haremos croissants de mantequilla y palmeras.</p>
+                        <div class="ws-footer">
+                            <span class="price">80€</span>
+                            <a href="#inscripcion" class="btn btn-primary">Reservar Plaza</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="inscripcion" class="contact-section" style="background-color: #f4f4f4;">
+            <div class="container">
+                <div class="dual-title">
+                    <span class="sub">Plazas Limitadas</span>
+                    <span class="main">Reserva tu plaza</span>
+                </div>
+                
+                <div style="max-width: 600px; margin: 0 auto; background: var(--blanco); padding: 40px; border-radius: 4px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+                    <form class="contact-form">
+                        <label style="font-weight: bold; display: block; margin-bottom: 5px;">Curso</label>
+                        <select style="margin-bottom: 20px;">
+                            <option>Iniciación al Pan Casero (15 NOV)</option>
+                            <option>Todo sobre la Masa Madre (22 NOV)</option>
+                            <option>Bollería y Hojaldre (29 NOV)</option>
+                        </select>
+
+                        <label style="font-weight: bold; display: block; margin-bottom: 5px;">Nombre Completo</label>
+                        <input type="text" placeholder="Tu nombre" required>
+
+                        <label style="font-weight: bold; display: block; margin-bottom: 5px;">Email</label>
+                        <input type="email" placeholder="tucorreo@ejemplo.com" required>
+
+                        <label style="font-weight: bold; display: block; margin-bottom: 5px;">Teléfono</label>
+                        <input type="tel" placeholder="600 000 000" required>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Solicitar Inscripción</button>
+                        <p style="font-size: 0.8rem; color: #888; margin-top: 15px; text-align: center;">
+                            * Te contactaremos para confirmar disponibilidad y método de pago.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>HORNO SAN MIGUEL</h3>
+                    <p>Panadería artesanal con más de 40 años de tradición. Respetamos los tiempos, la masa madre y el sabor de siempre.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explorar</h4>
+                    <ul class="footer-links">
+                        <li><a href="home.html">Inicio</a></li>
+                        <li><a href="products.html">Nuestro Obrador</a></li>
+                        <li><a href="workshop.html">Escuela</a></li>
+                        <li><a href="about.html">Historia</a></li>
+                        <li><a href="home.html#contacto">Haz un Encargo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Plaza Mayor 8, Madrid</p>
+                    <p><i class="fas fa-phone"></i> +34 912 345 678</p>
+                    <p><i class="fas fa-envelope"></i> hola@hornosanmiguel.com</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Horno San Miguel. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

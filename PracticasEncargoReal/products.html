@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horno San Miguel | Panadería Artesanal desde 1982</title>
+    <title>Nuestro Obrador | Horno San Miguel</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="img/icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -16,35 +16,305 @@
             </div>
 
             <nav class="nav-group nav-left">
-                <a href="#productos">Obrador</a>
-                <a href="#historia">Historia</a>
+                <a href="#">Obrador</a>
+                <a href="about.html">Historia</a>
             </nav>
 
             <div class="logo-container">
-                <a href="/home.html" class="logo">
+                <a href="home.html" class="logo">
                     Horno San Miguel
                     <span>DESDE 1982</span>
                 </a>
             </div>
 
             <nav class="nav-group nav-right">
-                <a href="#faq">Dudas</a>
-                <a href="#contacto">Encargos</a>
+                <a href="home.html#faq">Dudas</a>
+                <a href="home.html#contacto">Encargos</a>
             </nav>
         </div>
 
         <!-- Menu movil -->
         <div id="mobileMenu" class="mobile-menu">
             <a href="home.html" onclick="toggleMenu()">Inicio</a>
-            <a href="#productos" onclick="toggleMenu()">Obrador</a>
-            <a href="#historia" onclick="toggleMenu()">Historia</a>
-            <a href="#faq" onclick="toggleMenu()">Dudas</a>
-            <a href="#contacto" onclick="toggleMenu()">Encargos</a>
+            <a href="products.html" onclick="toggleMenu()">Obrador</a>
+            <a href="about.html" onclick="toggleMenu()">Historia</a>
+            <a href="home.html#faq" onclick="toggleMenu()">Dudas</a>
+            <a href="home.html#contacto" onclick="toggleMenu()">Encargos</a>
         </div>
     </header>
 
     <main>
         
+        <section id="hero-products">
+            <div class="hero-content">
+                <h1>Nuestro Obrador</h1>
+                <p>Harina, agua, sal y tiempo. Nada más.</p>
+            </div>
+            <div class="badge-warning"></div>
+        </section>
+
+        <section class="products-section container">
+            <div class="text-center" style="margin-bottom: 40px;">
+                <p style="max-width: 700px; margin: 0 auto; color: var(--gris);">
+                    Todos nuestros productos se elaboran cada madrugada. Si buscas algo específico para una cena o evento, te recomendamos encarecidamente que hagas un encargo previo.
+                </p>
+            </div>
+
+            <div class="product-filter">
+                <button class="filter-btn active" onclick="filterProducts('todos')">Todos</button>
+                <button class="filter-btn" onclick="filterProducts('pan')">Panes</button>
+                <button class="filter-btn" onclick="filterProducts('bolleria')">Bollería</button>
+                <button class="filter-btn" onclick="filterProducts('salado')">Salados</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                
+                <article class="product-card" data-category="pan" onclick="openModal('img/hogaza-de-campaña.avif', 'Hogaza de Campaña', '3.50€', 'Harina de trigo, agua, masa madre y sal.', '850g aprox', 'Ideal para tostas de desayuno o acompañar guisos.', 'Gluten')">
+                    <div class="product-image">
+                        <span class="allergen-tag">Contiene Gluten</span>
+                        <img src="img/hogaza-de-campaña.avif" alt="Hogaza Madre">
+                    </div>
+                    <div class="product-info">
+                        <h3>Hogaza de Campaña</h3>
+                        <div class="product-price">3.50€ / ud</div>
+                        <p class="product-desc-short">Nuestra joya. Masa madre de cultivo propio y 24h de fermentación.</p>
+                        <span class="view-details">Ver Detalles</span>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="pan" onclick="openModal('img/pan-centeno.avif', 'Pan de Centeno 100%', '4.00€', 'Harina de centeno integral, agua, masa madre y sal.', '900g aprox', 'Ideal para ahumados y quesos fuertes.', 'Gluten')">
+                    <div class="product-image">
+                        <span class="allergen-tag">Gluten</span>
+                        <img src="img/pan-centeno.avif" alt="Pan Centeno">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pan de Centeno 100%</h3>
+                        <div class="product-price">4.00€ / ud</div>
+                        <p class="product-desc-short">Miga densa, oscura y de sabor intenso. Larga conservación.</p>
+                        <span class="view-details">Ver Detalles</span>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="pan" onclick="openModal('img/barra-semillas.avif', 'Barra de Semillas', '1.20€', 'Harina integral, lino, sésamo, pipas de girasol.', '250g aprox', 'Bocadillos saludables.', 'Gluten, Sésamo')">
+                    <div class="product-image">
+                        <span class="allergen-tag">Gluten / Semillas</span>
+                        <img src="img/barra-semillas.avif" alt="Pan Semillas">
+                    </div>
+                    <div class="product-info">
+                        <h3>Barra de Semillas</h3>
+                        <div class="product-price">1.20€ / ud</div>
+                        <p class="product-desc-short">Crujiente por fuera, miga húmeda y mix de 5 semillas.</p>
+                        <span class="view-details">Ver Detalles</span>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="bolleria" onclick="openModal('img/croassant-mantequilla.avif', 'Croissant de Mantequilla', '1.80€', 'Harina de fuerza, mantequilla 82% M.G., azúcar, huevos.', '90g aprox', 'Consumir en el día.', 'Gluten, Lácteos, Huevo')">
+                    <div class="product-image">
+                        <span class="allergen-tag">Gluten / Lácteos</span>
+                        <img src="img/croassant-mantequilla.avif" alt="Croissant">
+                    </div>
+                    <div class="product-info">
+                        <h3>Croissant Artesano</h3>
+                        <div class="product-price">1.80€ / ud</div>
+                        <p class="product-desc-short">Hojaldrado manual con mantequilla de Normandía.</p>
+                        <span class="view-details">Ver Detalles</span>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="bolleria" onclick="openModal('img/napolitana-chocolate.jpg', 'Napolitana Chocolate', '1.90€', 'Harina, mantequilla, chocolate negro 70%, azúcar.', '110g aprox', 'La merienda clásica.', 'Gluten, Lácteos, Soja')">
+                    <div class="product-image">
+                        <span class="allergen-tag">Gluten / Lácteos</span>
+                        <img src="img/napolitana-chocolate.jpg" alt="Napolitana">
+                    </div>
+                    <div class="product-info">
+                        <h3>Napolitana Chocolate</h3>
+                        <div class="product-price">1.90€ / ud</div>
+                        <p class="product-desc-short">Hojaldre crujiente relleno de chocolate negro puro.</p>
+                        <span class="view-details">Ver Detalles</span>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="bolleria" onclick="openModal('img/palmeras-glaseadas.png', 'Palmeritas Glaseadas', '15.00€/kg', 'Harina, mantequilla, azúcar.', 'Venta al peso', 'Perfectas para acompañar el café.', 'Gluten, Lácteos')">
+                    <div class="product-image">
+                        <span class="allergen-tag">Gluten / Lácteos</span>
+                        <img src="img/palmeras-glaseadas.png" alt="Palmeritas">
+                    </div>
+                    <div class="product-info">
+                        <h3>Palmeritas Glaseadas</h3>
+                        <div class="product-price">15.00€ / kg</div>
+                        <p class="product-desc-short">Pequeños bocados de hojaldre caramelizado al horno.</p>
+                        <span class="view-details">Ver Detalles</span>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="salado" onclick="openModal('img/empanada-atun.jpg', 'Empanada de Atún', '18.00€/kg', 'Harina, aceite de oliva, tomate, pimiento, cebolla, atún.', 'Venta al peso', 'Perfecta fría o caliente.', 'Gluten, Huevo, Pescado')">
+                    <div class="product-image">
+                        <span class="allergen-tag">Gluten / Huevo</span>
+                        <img src="img/empanada-atun.jpg" alt="Empanada">
+                    </div>
+                    <div class="product-info">
+                        <h3>Empanada de Atún</h3>
+                        <div class="product-price">18.00€ / kg</div>
+                        <p class="product-desc-short">Masa fina crujiente con pisto casero y atún del norte.</p>
+                        <span class="view-details">Ver Detalles</span>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="salado" onclick="openModal('img/quiche-espinacas.png', 'Quiche de Espinacas', '3.50€', 'Harina, mantequilla, huevo, nata, espinacas, queso de cabra.', '200g / porción', 'Almuerzo ligero.', 'Gluten, Lácteos, Huevo')">
+                    <div class="product-image">
+                        <span class="allergen-tag">Gluten / Lácteos</span>
+                        <img src="img/quiche-espinacas.png" alt="Quiche">
+                    </div>
+                    <div class="product-info">
+                        <h3>Quiche de Espinacas</h3>
+                        <div class="product-price">3.50€ / porción</div>
+                        <p class="product-desc-short">Base quebrada casera con queso de cabra y espinacas.</p>
+                        <span class="view-details">Ver Detalles</span>
+                    </div>
+                </article>
+                <article class="product-card" data-category="pan" onclick="openModal('img/baguette.png', 'Baguette Tradición', '1.10€', 'Harina de trigo T65, agua, sal, levadura.', '250g', 'Bocadillos crujientes o para acompañar quesos.', 'Gluten')">
+                    <div class="product-image">
+                        <span class="allergen-tag">Gluten</span>
+                        <img src="img/baguette.png" alt="Baguette Tradición">
+                    </div>
+                    <div class="product-info">
+                        <h3>Baguette Tradición</h3>
+                        <div class="product-price">1.10€ / ud</div>
+                        <p class="product-desc-short">La auténtica receta francesa. Corteza muy crujiente y miga alveolada.</p>
+                        <span class="view-details">Ver Detalles</span>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="bolleria" onclick="openModal('img/ensaimada.png', 'Ensaimada Artesana', '2.20€', 'Harina, manteca de cerdo, azúcar, huevos, azúcar glass.', '120g', 'Desayuno dulce tradicional.', 'Gluten, Huevo, Lácteos')">
+                    <div class="product-image">
+                        <span class="allergen-tag">Gluten / Huevo</span>
+                        <img src="img/ensaimada.png" alt="Ensaimada">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ensaimada Artesana</h3>
+                        <div class="product-price">2.20€ / ud</div>
+                        <p class="product-desc-short">Fermentación de 12 horas. Espolvoreada con azúcar glass al momento.</p>
+                        <span class="view-details">Ver Detalles</span>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="salado" onclick="openModal('img/focaccia.png', 'Focaccia al Romero', '12.00€/kg', 'Harina, aceite de oliva virgen extra, sal en escamas, romero fresco.', 'Al peso', 'Aperitivo o acompañamiento.', 'Gluten')">
+                    <div class="product-image">
+                        <span class="allergen-tag">Gluten</span>
+                        <img src="img/focaccia.png" alt="Focaccia">
+                    </div>
+                    <div class="product-info">
+                        <h3>Focaccia al Romero</h3>
+                        <div class="product-price">12.00€ / kg</div>
+                        <p class="product-desc-short">Esponjosa y fragante, con mucho aceite de oliva virgen extra.</p>
+                        <span class="view-details">Ver Detalles</span>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="bolleria" onclick="openModal('img/magdalena.png', 'Magdalenas de Pueblo', '0.90€', 'Harina, aceite de girasol, huevos, azúcar, ralladura de limón.', '80g', 'Mojar en leche.', 'Gluten, Huevo')">
+                    <div class="product-image">
+                        <span class="allergen-tag">Gluten / Huevo</span>
+                        <img src="img/magdalena.png" alt="Magdalenas">
+                    </div>
+                    <div class="product-info">
+                        <h3>Magdalenas de Pueblo</h3>
+                        <div class="product-price">0.90€ / ud</div>
+                        <p class="product-desc-short">La receta de la abuela, con copete alto y azúcar crujiente.</p>
+                        <span class="view-details">Ver Detalles</span>
+                    </div>
+                </article>
+                <article class="product-card" data-category="pan" onclick="openModal('img/hogaza-nueces.png', 'Hogaza de Nueces', '4.20€', 'Harina de trigo, harina de centeno, nueces (15%), masa madre y agua.', '500g', 'Espectacular con quesos azules o membrillo.', 'Gluten, Frutos Secos')">
+                    <div class="product-image">
+                        <span class="allergen-tag">Gluten / Nueces</span>
+                        <img src="img/hogaza-nueces.png" alt="Pan de Nueces">
+                    </div>
+                    <div class="product-info">
+                        <h3>Hogaza de Nueces</h3>
+                        <div class="product-price">4.20€ / ud</div>
+                        <p class="product-desc-short">Miga oscura y aromática tropezones de nuez en cada bocado.</p>
+                        <span class="view-details">Ver Detalles</span>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="pan" onclick="openModal('img/barra-gallega.png', 'Barra Gallega', '1.30€', 'Harina de gran fuerza, mucha agua y larga fermentación en bloque.', '280g', 'Para mojar en salsas y guisos.', 'Gluten')">
+                    <div class="product-image">
+                        <span class="allergen-tag">Gluten</span>
+                        <img src="img/barra-gallega.png" alt="Barra Gallega">
+                    </div>
+                    <div class="product-info">
+                        <h3>Barra Gallega</h3>
+                        <div class="product-price">1.30€ / ud</div>
+                        <p class="product-desc-short">Corteza gruesa y enharinada, con una miga llena de grandes alveolos.</p>
+                        <span class="view-details">Ver Detalles</span>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="bolleria" onclick="openModal('img/tarta-manzana.png', 'Tarta Fina de Manzana', '3.00€', 'Base de hojaldre fino, crema pastelera casera, manzana reineta.', 'Porción', 'Tómala templada, quizás con un poco de helado.', 'Gluten, Lácteos, Huevo')">
+                    <div class="product-image">
+                        <span class="allergen-tag">Gluten / Lácteos</span>
+                        <img src="img/tarta-manzana.png" alt="Tarta de Manzana">
+                    </div>
+                    <div class="product-info">
+                        <h3>Tarta Fina de Manzana</h3>
+                        <div class="product-price">3.00€ / porción</div>
+                        <p class="product-desc-short">Clásico de la casa. Manzana cortada a cuchillo sobre hojaldre crujiente.</p>
+                        <span class="view-details">Ver Detalles</span>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="bolleria" onclick="openModal('img/berlina.png', 'Berlina Glaseada', '1.50€', 'Harina, huevo, azúcar, aceite de girasol, levadura fresca.', '90g', 'La merienda favorita de los niños.', 'Gluten, Huevo')">
+                    <div class="product-image">
+                        <span class="allergen-tag">Gluten / Huevo</span>
+                        <img src="img/berlina.png" alt="Berlina">
+                    </div>
+                    <div class="product-info">
+                        <h3>Berlina Glaseada</h3>
+                        <div class="product-price">1.50€ / ud</div>
+                        <p class="product-desc-short">Masa tipo brioche frita y bañada en una fina capa de azúcar.</p>
+                        <span class="view-details">Ver Detalles</span>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="salado" onclick="openModal('img/coca-verduras.png', 'Coca de Verduras', '12.50€/kg', 'Masa de aceite de oliva, pimiento rojo, pimiento verde, cebolla.', 'Al peso', 'Perfecto para picotear o cenar ligero.', 'Gluten')">
+                    <div class="product-image">
+                        <span class="allergen-tag">Gluten</span>
+                        <img src="img/coca-verduras.png" alt="Coca de Verduras">
+                    </div>
+                    <div class="product-info">
+                        <h3>Coca de Verduras</h3>
+                        <div class="product-price">12.50€ / kg</div>
+                        <p class="product-desc-short">Estilo mediterráneo. Masa fina y crujiente con verduras asadas.</p>
+                        <span class="view-details">Ver Detalles</span>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="salado" onclick="openModal('img/hojaldre-ternera.png', 'Aguja de Ternera', '2.80€', 'Hojaldre de mantequilla, carne picada de ternera, tomate, cebolla.', '150g', 'Un almuerzo rápido y contundente.', 'Gluten, Lácteos, Huevo')">
+                    <div class="product-image">
+                        <span class="allergen-tag">Gluten / Lácteos</span>
+                        <img src="img/hojaldre-ternera.png" alt="Aguja de Ternera">
+                    </div>
+                    <div class="product-info">
+                        <h3>Aguja de Ternera</h3>
+                        <div class="product-price">2.80€ / ud</div>
+                        <p class="product-desc-short">Nuestro hojaldre de siempre relleno de guiso de carne jugosa.</p>
+                        <span class="view-details">Ver Detalles</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="about-section text-center">
+            <div class="container">
+                <div class="dual-title">
+                    <span class="sub">¿Necesitas grandes cantidades?</span>
+                    <span class="main">Servicio a Restauración</span>
+                </div>
+                <p style="margin-bottom: 30px;">Si tienes un restaurante o cafetería, podemos ser tu proveedor de confianza.</p>
+                <a href="home.html#contacto" class="btn btn-primary">Contactar</a>
+            </div>
+        </section>
+
     </main>
 
     <footer>
@@ -60,8 +330,9 @@
                     <ul class="footer-links">
                         <li><a href="home.html">Inicio</a></li>
                         <li><a href="products.html">Nuestro Obrador</a></li>
+                        <li><a href="workshop.html">Escuela</a></li>
                         <li><a href="about.html">Historia</a></li>
-                        <li><a href="#contacto">Haz un Encargo</a></li>
+                        <li><a href="home.html#contacto">Haz un Encargo</a></li>
                     </ul>
                 </div>
 

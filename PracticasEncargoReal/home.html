@@ -16,8 +16,8 @@
             </div>
 
             <nav class="nav-group nav-left">
-                <a href="#productos">Obrador</a>
-                <a href="/about.html">Historia</a>
+                <a href="products.html">Obrador</a>
+                <a href="about.html">Historia</a>
             </nav>
 
             <div class="logo-container">
@@ -36,8 +36,8 @@
         <!-- Menu movil -->
         <div id="mobileMenu" class="mobile-menu">
             <a href="home.html" onclick="toggleMenu()">Inicio</a>
-            <a href="#productos" onclick="toggleMenu()">Obrador</a>
-            <a href="#historia" onclick="toggleMenu()">Historia</a>
+            <a href="products.html" onclick="toggleMenu()">Obrador</a>
+            <a href="about.html" onclick="toggleMenu()">Historia</a>
             <a href="#faq" onclick="toggleMenu()">Dudas</a>
             <a href="#contacto" onclick="toggleMenu()">Encargos</a>
         </div>
@@ -62,15 +62,8 @@
                 <span class="main">Especialidades Diarias</span>
             </div>
 
-            <div class="product-filter">
-                <button class="filter-btn active" onclick="filterProducts('todos')">Todos</button>
-                <button class="filter-btn" onclick="filterProducts('pan')">Panes</button>
-                <button class="filter-btn" onclick="filterProducts('bolleria')">Bollería</button>
-                <button class="filter-btn" onclick="filterProducts('salado')">Salados</button>
-            </div>
-
             <div class="products-grid" id="productsGrid">
-                <!-- Producto 1 -->
+
                 <article class="product-card" data-category="pan" onclick="openModal('img/hogaza-de-campaña.avif', 'Hogaza de Campaña', '3.50€', 'Harina de trigo, agua, masa madre y sal.', '850g aprox', 'Ideal para tostas de desayuno o acompañar guisos fuertes.', 'Gluten')">
                     <div class="product-image">
                         <span class="allergen-tag">Contiene Gluten</span>
@@ -84,7 +77,6 @@
                     </div>
                 </article>
 
-                <!-- Producto 2 -->
                 <article class="product-card" data-category="bolleria" onclick="openModal('img/croassant-mantequilla.avif', 'Croissant de Mantequilla', '1.80€', 'Harina de fuerza, mantequilla 82% M.G., azúcar, huevos.', '90g aprox', 'Consumir en el día. No calentar en microondas.', 'Gluten, Lácteos, Huevo')">
                     <div class="product-image">
                         <span class="allergen-tag">Gluten / Lácteos</span>
@@ -98,7 +90,6 @@
                     </div>
                 </article>
 
-                <!-- Producto 3 -->
                 <article class="product-card" data-category="salado" onclick="openModal('img/empanada-atun.jpg', 'Empanada de Atún', '18.00€/kg', 'Harina, aceite de oliva, tomate, pimiento, cebolla, atún.', 'Venta al peso', 'Perfecta fría o con un golpe de horno.', 'Gluten, Huevo, Pescado')">
                     <div class="product-image">
                         <span class="allergen-tag">Gluten / Huevo</span>
@@ -111,81 +102,16 @@
                         <span class="view-details">Ver Detalles</span>
                     </div>
                 </article>
-                
-                <!-- Producto 4 -->
-                <article class="product-card" data-category="pan" onclick="openModal('img/barra-semillas.avif', 'Barra de Semillas', '1.20€', 'Harina integral, lino, sésamo, pipas de girasol.', '250g aprox', 'Bocadillos saludables.', 'Gluten, Sésamo')">
-                    <div class="product-image">
-                        <span class="allergen-tag">Gluten / Semillas</span>
-                        <img src="img/barra-semillas.avif" alt="Pan Semillas">
-                    </div>
-                    <div class="product-info">
-                        <h3>Barra de Semillas</h3>
-                        <div class="product-price">1.20€ / ud</div>
-                        <p class="product-desc-short">Crujiente por fuera, miga húmeda y mix de 5 semillas.</p>
-                        <span class="view-details">Ver Detalles</span>
-                    </div>
-                </article>
-
-                <!-- Producto 5 -->
-                <article class="product-card" data-category="pan" onclick="openModal('img/pan-centeno.avif', 'Pan de Centeno 100%', '4.00€', 'Harina de centeno integral, agua, masa madre y sal.', '900g aprox', 'Ideal para ahumados y quesos fuertes.', 'Gluten')">
-                    <div class="product-image">
-                        <span class="allergen-tag">Gluten</span>
-                        <img src="img/pan-centeno.avif" alt="Pan Centeno">
-                    </div>
-                    <div class="product-info">
-                        <h3>Pan de Centeno 100%</h3>
-                        <div class="product-price">4.00€ / ud</div>
-                        <p class="product-desc-short">Miga densa, oscura y de sabor intenso. Larga conservación.</p>
-                        <span class="view-details">Ver Detalles</span>
-                    </div>
-                </article>
-
-                <!-- Producto 6 -->
-                <article class="product-card" data-category="bolleria" onclick="openModal('img/napolitana-chocolate.jpg', 'Napolitana Chocolate', '1.90€', 'Harina, mantequilla, chocolate negro 70%, azúcar.', '110g aprox', 'La merienda clásica, mejorada.', 'Gluten, Lácteos, Soja')">
-                    <div class="product-image">
-                        <span class="allergen-tag">Gluten / Lácteos / Soja</span>
-                        <img src="img/napolitana-chocolate.jpg" alt="Napolitana Chocolate">
-                    </div>
-                    <div class="product-info">
-                        <h3>Napolitana Chocolate</h3>
-                        <div class="product-price">1.90€ / ud</div>
-                        <p class="product-desc-short">Hojaldre crujiente relleno de chocolate negro puro.</p>
-                        <span class="view-details">Ver Detalles</span>
-                    </div>
-                </article>
-
-                <!-- Producto 7 -->
-                <article class="product-card" data-category="salado" onclick="openModal('img/quiche-espinacas.png', '3.50€', 'Harina, mantequilla, huevo, nata, espinacas, queso de cabra.', '200g / porción', 'Almuerzo ligero o cena rápida.', 'Gluten, Lácteos, Huevo')">
-                    <div class="product-image">
-                        <span class="allergen-tag">Gluten / Lácteos / Huevo</span>
-                        <img src="img/quiche-espinacas.png" alt="Quiche">
-                    </div>
-                    <div class="product-info">
-                        <h3>Quiche de Espinacas</h3>
-                        <div class="product-price">3.50€ / porción</div>
-                        <p class="product-desc-short">Base quebrada casera con queso de cabra y espinacas frescas.</p>
-                        <span class="view-details">Ver Detalles</span>
-                    </div>
-                </article>
-
-                <!-- Producto 8 -->
-                <article class="product-card" data-category="bolleria" onclick="openModal('img/palmeras-glaseadas.png', 'Palmeritas Glaseadas', '15.00€/kg', 'Harina, mantequilla, azúcar.', 'Venta al peso', 'Perfectas para acompañar el café.', 'Gluten, Lácteos')">
-                    <div class="product-image">
-                        <span class="allergen-tag">Gluten / Lácteos</span>
-                        <img src="img/palmeras-glaseadas.png" alt="Palmeritas">
-                    </div>
-                    <div class="product-info">
-                        <h3>Palmeritas Glaseadas</h3>
-                        <div class="product-price">15.00€ / kg</div>
-                        <p class="product-desc-short">Pequeños bocados de hojaldre caramelizado al horno.</p>
-                        <span class="view-details">Ver Detalles</span>
-                    </div>
-                </article>
             </div>
             
             <div class="text-center">
                 <p class="text-muted"><em>* Aviso: Consulta en tienda si tienes alergias severas. Indicamos los más comunes.</em></p>
             </div>
+
+            <div class="about-link">
+                <a href="products.html" class="btn btn-primary">Ver mas productos</a>
+            </div>
+
         </section>
 
         <section id="historia" class="about-section">
@@ -208,6 +134,24 @@
                 </div>
             </div>
         </section>
+
+        <section id="escuela-promo" class="school-cta">
+            <div class="school-overlay"></div>
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="school-content text-center">
+                    <i class="fas fa-bread-slice" style="font-size: 3rem; color: var(--colorCrema); margin-bottom: 20px;"></i>
+                    <div class="dual-title">
+                        <span class="sub" style="color: var(--colorCrema);">Comparte el oficio</span>
+                        <span class="main" style="color: var(--blanco);">Escuela de Pan</span>
+                    </div>
+                    <p style="color: #ddd; max-width: 600px; margin: 0 auto 30px; font-size: 1.1rem;">
+                        ¿Te gustaría aprender a hacer tu propio pan de masa madre en casa? 
+                        Impartimos talleres presenciales de fin de semana para grupos reducidos.
+                    </p>
+                    <a href="workshop.html" class="btn btn-primary">Ver Próximos Cursos</a>
+                </div>
+            </div>
+        </section>
         
         <section id="faq" class="container" style="padding: 60px 20px;">
             <h2 class="section-title" style="color: var(--colorResalto); font-size: 1.8rem;">Preguntas Frecuentes</h2>
@@ -219,6 +163,25 @@
                 <details style="margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
                     <summary style="cursor: pointer; font-weight: bold; color: var(--colorTexto);">¿Cómo caliento el pan en casa?</summary>
                     <p style="margin-top: 10px; color: #666;">Rocía un poco de agua sobre la corteza y hornéalo a 180ºC durante 5 minutos.</p>
+                </details>
+                <details style="margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
+                    <summary style="cursor: pointer; font-weight: bold; color: var(--colorTexto);">¿Cómo conservo el pan para que dure más?</summary>
+                    <p style="margin-top: 10px; color: #666;">Guárdalo en una bolsa de tela o papel a temperatura ambiente. Evita el plástico, ya que ablanda la corteza y favorece el moho.</p>
+                </details>
+
+                <details style="margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
+                    <summary style="cursor: pointer; font-weight: bold; color: var(--colorTexto);">¿Tenéis pan sin gluten?</summary>
+                    <p style="margin-top: 10px; color: #666;">Elaboramos panes con harinas bajas en gluten (como sarraceno), pero al ser un obrador artesano único, no podemos garantizar la ausencia total de trazas cruzadas.</p>
+                </details>
+
+                <details style="margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
+                    <summary style="cursor: pointer; font-weight: bold; color: var(--colorTexto);">¿Hacéis envíos a domicilio?</summary>
+                    <p style="margin-top: 10px; color: #666;">Por ahora solo servimos en tienda física para garantizar la máxima frescura, pero puedes encargar por teléfono y pasar a recogerlo sin colas.</p>
+                </details>
+
+                <details style="margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
+                    <summary style="cursor: pointer; font-weight: bold; color: var(--colorTexto);">¿Qué es exactamente la masa madre?</summary>
+                    <p style="margin-top: 10px; color: #666;">Es un fermento natural compuesto solo por harina y agua. Aporta sabor, mejora la digestión y hace que el pan se conserve fresco durante más días sin conservantes.</p>
                 </details>
             </div>
         </section>
@@ -246,13 +209,15 @@
                     <div class="contact-box">
                         <form class="contact-form">
                             <h4 style="font-family: var(--fuentePrincipal); color: var(--colorResalto); margin-bottom: 20px; font-size: 1.2rem;">Haz un encargo</h4>
-                            <input type="text" placeholder="Tu nombre">
-                            <input type="tel" placeholder="Teléfono">
+                            <input type="text" placeholder="Tu nombre" required>
+                            <input type="tel" placeholder="Teléfono" required>
                             <select>
                                 <option>Panes</option>
-                                <option>Pastelería</option>
+                                <option>Bollería</option>
+                                <option>Salado</option>
                                 <option>Consulta General</option>
                             </select>
+                            <textarea placeholder="Cuéntanos qué necesitas (ej: 2 hogazas para el viernes a las 10h)..." rows="4" style="resize: vertical;"></textarea>
                             <button type="button" class="btn btn-primary" style="width: 100%;">Enviar Mensaje</button>
                         </form>
                     </div>
@@ -274,6 +239,7 @@
                     <ul class="footer-links">
                         <li><a href="home.html">Inicio</a></li>
                         <li><a href="products.html">Nuestro Obrador</a></li>
+                        <li><a href="workshop.html">Escuela</a></li>
                         <li><a href="about.html">Historia</a></li>
                         <li><a href="#contacto">Haz un Encargo</a></li>
                     </ul>
