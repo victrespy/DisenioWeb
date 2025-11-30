@@ -1,6 +1,6 @@
 const modal = document.getElementById('productModal');
 
-const backgroundMask = document.getElementById('inicio');
+const backgroundMask = document.getElementById('innit');
 
 document.addEventListener('DOMContentLoaded', () => {
     backgroundMask.classList.add('unlocked');
