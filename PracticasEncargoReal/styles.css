@@ -509,7 +509,8 @@ nav a:hover {
 }
 
 /* --- WORKSHOP --- */
-.school-cta {
+
+#workshop {
     position: relative;
     background-image: url(img/workshop.png); 
     background-size: cover;
@@ -530,8 +531,66 @@ nav a:hover {
     z-index: 1;
 }
 
+#workshop .container {
+    position: relative;
+    z-index: 2;
+}
+
+.school-content {
+    font-size: 3rem;
+    color: var(--colorCrema); 
+    margin-bottom: 20px
+}
+
+.school-content .dual-title .main {
+    color: var(--blanco);
+}
+
 .school-content .dual-title span.main::after {
     background-color: var(--colorCrema);
+}
+
+.school-content p {
+    color: var(--blanco);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* --- FAQ --- */
+
+#faq {
+    padding: var(--espaciado) 0;
+}
+
+#faq h2 {
+    margin-bottom: 40px;
+    color: var(--colorResalto); 
+    font-size: 1.8rem;
+}
+
+#faq > div {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#faq details {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+#faq summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--colorTexto);
+}
+
+#faq p {
+    margin-top: 10px;
+    color: var(--gris);
 }
 
 /* --- CONTACTO --- */
@@ -557,7 +616,18 @@ nav a:hover {
     margin-bottom: 35px;
 }
 
+.info-item p:nth-child(3) {
+    margin-top: 10px;
+}
+
 .info-item h4 {
+    font-family: var(--fuentePrincipal);
+    color: var(--colorResalto);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.contact-box h4 {
     font-family: var(--fuentePrincipal);
     color: var(--colorResalto);
     margin-bottom: 10px;
@@ -571,6 +641,10 @@ nav a:hover {
     border: 1px solid #ddd;
     font-family: var(--fuenteSecundaria);
     background-color: #fafafa;
+}
+
+.contact-form button {
+    width: 100%;
 }
 
 /* --- FOOTER --- */
@@ -695,6 +769,32 @@ footer {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
+.pilars {
+    text-align: center;
+}
+
+.pilars i {
+    font-size: 2.5rem; 
+    color: var(--colorResalto); 
+    margin-bottom: 20px;
+}
+
+.pilars h3 { 
+    margin-bottom: 15px;
+}
+
+.difference {
+    padding: 80px 20px;
+}
+
+.difference p {
+    margin-bottom: 30px; 
+    color: var(--gris); 
+    max-width: 600px; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
 /* --- PAGE PRODUCTS --- */
 
 #hero-products {
@@ -724,11 +824,18 @@ footer {
     font-family: var(--fuenteSecundaria);
 }
 
-/* Ajuste responsive para el banner */
-@media (max-width: 768px) {
-    #hero-products h1 {
-        font-size: 2.5rem;
-    }
+.products-intro {
+    margin-bottom: 40px;
+}
+
+.products-intro p {
+     max-width: 700px; 
+     margin: 0 auto; 
+     color: var(--gris);
+}
+
+.restoration-service p {
+     margin-bottom: 30px;
 }
 
 
@@ -753,7 +860,16 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-/* Grid de Talleres */
+.courses {
+     padding: 60px 20px;
+}
+
+.courses p {
+    max-width: 800px; 
+    margin: 0 auto; 
+    color: var(--gris);
+}
+
 .workshop-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -775,7 +891,6 @@ footer {
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
-/* Fecha flotante */
 .ws-date {
     position: absolute;
     top: 15px;
@@ -823,7 +938,7 @@ footer {
     padding: 25px;
 }
 
-.ws-meta {
+.ws-info {
     display: flex;
     justify-content: space-between;
     font-size: 0.85rem;
@@ -834,7 +949,7 @@ footer {
     font-weight: 500;
 }
 
-.ws-meta i {
+.ws-info i {
     color: var(--colorCrema);
     margin-right: 5px;
 }
@@ -867,6 +982,32 @@ footer {
     color: var(--colorTexto);
 }
 
+#inscription .container > div:nth-child(2) {
+    max-width: 600px; 
+    margin: 0 auto; 
+    background: var(--blanco); 
+    padding: 40px; 
+    border-radius: 4px; 
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+#inscription .container > div:nth-child(2) label {
+    font-weight: bold; 
+    display: block; 
+    margin-bottom: 5px;
+}
+
+#inscription .container > div:nth-child(2) button {
+    margin-top: 15px; 
+    width: 100%;
+}
+
+#inscription .container > div:nth-child(2) p {
+    font-size: 0.8rem; 
+    color: var(--gris); 
+    margin-top: 15px; 
+    text-align: center;
+}
 
 /* --- MODAL --- */
 .modal {
@@ -1000,7 +1141,10 @@ footer {
     letter-spacing: 0.5px;
 }
 
-
+#modalAllergensContainer {
+    display:flex; 
+    gap:8px;
+}
 
 
 
@@ -1037,52 +1181,107 @@ footer {
 }
 
 @media (max-width: 900px) {
-    .header-inner { flex-direction: column; gap: 15px; }
-    .nav-group { width: 100%; justify-content: center; padding: 0; gap: 15px; }
-    .nav-left { order: 2; }
-    .nav-right { order: 3; }
-    .logo-container { order: 1; margin-bottom: 10px; }
+    .header-inner { 
+        flex-direction: column; 
+        gap: 15px; 
+    }
+    .nav-group { 
+        width: 100%; 
+        justify-content: center; 
+        padding: 0; 
+        gap: 15px; 
+    }
+    .nav-left { 
+        order: 2; 
+    }
+    .nav-right { 
+        order: 3; 
+    }
+    .logo-container { 
+        order: 1; 
+        margin-bottom: 10px; 
+    }
     
-    .hero-content h1 { font-size: 2.5rem; }
-    .about-grid, .contact-grid { grid-template-columns: 1fr; }
-    .about-images { order: -1; }
+    .hero-content h1 { 
+        font-size: 2.5rem; 
+    }
+    .about-grid, .contact-grid { 
+        grid-template-columns: 1fr; 
+    }
+    .about-images { 
+        order: -1; 
+    }
+}
+
+@media (max-width: 768px) {
+    #hero-products h1 {
+        font-size: 2.5rem;
+    }
 }
 
 @media (max-width: 600px) {
-    .nav-group { display: none; } 
-    .header-inner { flex-direction: row; justify-content: space-between; padding: 0 20px;}
-    .logo-container { margin: 0; border: none; }
-    .mobile-toggle { display: block; }
+    .nav-group { 
+        display: none; 
+    } 
+    .header-inner { 
+        flex-direction: row; 
+        justify-content: space-between; 
+        padding: 0 20px;
+    }
+    .logo-container { 
+        margin: 0; 
+        border: none; 
+    }
+    .mobile-toggle { 
+        display: block; 
+    }
     
-    .section-title { font-size: 2rem; }
-    .dual-title span.main { font-size: 2rem; }
-
-    /* Ajustes Modal en Móvil */
-    .modal-header-img { height: 120px; } 
-    .modal-title-row h2 { font-size: 1.2rem; }
-    .modal-price { font-size: 1.1rem; }
-    .modal-body { padding: 15px; }
-    .modal-text { font-size: 0.85rem; margin-bottom: 10px; }
-    .modal-grid-info { gap: 10px; margin-bottom: 10px; padding-bottom: 10px; }
+    .section-title { 
+        font-size: 2rem; 
+    }
+    .dual-title span.main { 
+        font-size: 2rem; 
+    }
     
-    /* Ajuste productos en móvil para que no queden pegados */
-    .products-section { padding: 60px 20px; }
+    .modal-header-img { 
+        height: 120px; 
+    } 
+    .modal-title-row h2 { 
+        font-size: 1.2rem; 
+    }
+    .modal-price { 
+        font-size: 1.1rem; 
+    }
+    .modal-body { 
+        padding: 15px; 
+    }
+    .modal-text { 
+        font-size: 0.85rem; 
+        margin-bottom: 10px; 
+    }
+    .modal-grid-info { 
+        gap: 10px; 
+        margin-bottom: 10px; 
+        padding-bottom: 10px; 
+    }
+    .products-section {
+        padding: 60px 20px;
+    }
 }
 
-/* CAMBIO: Ajuste específico para pantallas muy estrechas (< 430px) */
 @media (max-width: 430px) {
     .logo {
-        font-size: 1.3rem; /* Reducido de 1.8rem */
-        padding: 3px 6px;  /* Padding más ajustado */
-        border-width: 1px; /* Bordes más finos para que no pesen tanto visualmente */
+        font-size: 1.3rem;
+        padding: 3px 6px;
+        border-width: 1px;
         letter-spacing: 0.5px;
     }
     .logo span {
-        font-size: 0.5rem; /* Subtítulo más pequeño */
+        font-size: 0.5rem;
         letter-spacing: 1px;
         margin-top: 2px;
     }
     .header-inner {
-        padding: 0 15px; /* Un poco menos de padding lateral en el header */
+        padding: 0 15px;
     }
 }
