@@ -284,6 +284,94 @@ footer {
     }
 }
 
+#about-header {
+    position: relative !important;
+    li {
+        color: black !important;
+        .btn-blanco{
+            border: 2px solid black;
+        }
+    }
+}
+
+/* Estilos generales para el contenedor */
+.contact-form-container {
+  max-width: 600px; /* Ajusta según el ancho de columna que desees */
+  font-family: sans-serif; /* O la fuente que uses en el proyecto */
+  color: #111;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* Agrupación de inputs y etiquetas */
+.input-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos de las etiquetas (Labels) */
+label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Estilos de los campos (Inputs y Textarea) */
+input, textarea {
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb; /* Gris muy suave */
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #000; /* Borde oscuro al seleccionar */
+}
+
+input::placeholder, textarea::placeholder {
+  color: #9ca3af; /* Gris claro para el placeholder */
+}
+
+/* Layout de la primera fila (Nombre/Apellido) */
+.form-row {
+  display: flex;
+  gap: 20px; /* Espacio entre las columnas */
+}
+
+.form-row .input-group {
+  flex: 1; /* Ambos ocupan el mismo ancho (50%) */
+}
+
+/* Botón de envío */
+.submit-btn {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #333;
+}
+
+
+
+
 @media screen and (max-width: 1000px){
     #comprar{
         flex-direction: column;
