@@ -434,4 +434,22 @@ input::placeholder, textarea::placeholder {
         }
     }
 
+    /* Contenedor de los botones: usamos Flexbox para apilarlos */
+    #comprar > div:nth-child(1) > div,
+    #novedades > div:nth-child(1) > div {
+        display: flex;
+        flex-direction: column; /* Apila los elementos verticalmente */
+        gap: 20px;              /* Espacio entre botones */
+        align-items: center;    /* Los centra horizontalmente */
+        width: 100%;            /* Ocupa todo el ancho disponible */
+    }
+
+    /* Ajuste opcional para que los botones tengan un tamaño consistente */
+    .btn-negro, .btn-gris {
+        width: 100%;
+        max-width: 350px;       /* Evita que se estiren demasiado en tablets */
+        box-sizing: border-box; 
+        text-align: center;
+    }
+
 }
