@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+#hero{
+    background:url('./2TDAW_DIW_maquetacion-strangerthings/maquetacion-strangerthings/img/hero.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 80vh;
+    border-color: red !important;
+}
+
+#hero>div{
+    background: linear-gradient(rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0.911));
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    color: red;
+    font-family: Creepster;
+}
+
+#hero>div>a{
+    color: red !important;
+    border-color: red !important;
+}
+ 
