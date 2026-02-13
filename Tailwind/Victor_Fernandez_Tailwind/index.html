@@ -1,0 +1,297 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trespy Tattoo</title>
+  <link href="/src/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-pure-black text-gray-400 font-sans">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 w-full z-50 glass border-b border-white/10">
+        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="font-serif text-2xl font-black tracking-tighter text-white uppercase">
+                Trespy<span class="text-accent-red">_</span>Tattoo
+            </a>
+            
+            <ul class="hidden md:flex space-x-10 text-xs uppercase tracking-[0.3em] font-bold">
+                <li><a href="#inicio" class="hover:text-white transition-colors">Intro</a></li>
+                <li><a href="#especialidad" class="hover:text-white transition-colors">Estilo</a></li>
+                <li><a href="#galeria" class="hover:text-white transition-colors">Piezas</a></li>
+                <li><a href="#sobre-mi" class="hover:text-white transition-colors">Bio</a></li>
+                <li><a href="#contacto" class="text-accent-red hover:text-white transition-colors">Citas</a></li>
+            </ul>
+
+            <button class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- SECTION 1: HERO -->
+    <section id="inicio" class="relative min-h-screen flex items-center px-6 lg:px-25 overflow-hidden grainy-bg">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-linear-to-r from-pure-black via-pure-black/80 to-transparent"></div>
+            <img src="./public/img/banner3.png" alt="Blackwork Tattoo" class="w-full h-full object-cover grayscale brightness-50">
+        </div>
+
+        <div class="relative z-10 max-w-4xl">
+            <h1 class="font-serif text-6xl md:text-9xl text-white mb-6 leading-[0.85] uppercase">
+                Todo al <br><span class="italic text-accent-red">Negro.</span>
+            </h1>
+            <p class="text-xl w-[70%] md:w-auto md:text-2xl text-gray-300 mb-10 max-w-xl leading-relaxed font-light">
+                Especialista en <span class="text-white font-bold">Blackwork</span> y <span class="text-white font-bold">Dark Art</span>. Sin sutilezas, solo contraste absoluto y piezas que dominan la piel.
+            </p>
+            <div class="flex flex-wrap gap-6">
+                <a href="#contacto" class="px-12 py-5 bg-white text-black font-black uppercase tracking-widest hover:bg-accent-red hover:text-white transition-all duration-500">
+                    Reserva sesión
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: ESPECIALIDAD -->
+    <section id="especialidad" class="py-32 bg-ink-depth">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-1 bg-white/5 border border-white/5">
+                <div class="p-12 hover:bg-pure-black transition-colors duration-500">
+                    <h3 class="font-serif text-3xl text-white mb-6 italic">Solid Black</h3>
+                    <p class="leading-relaxed">Grandes áreas de negro sólido. Busco la saturación perfecta para que el negro sea eterno y profundo.</p>
+                </div>
+                <div class="p-12 bg-white/5 hover:bg-pure-black transition-colors duration-500">
+                    <h3 class="font-serif text-3xl text-white mb-6 italic">Heavy Dotwork</h3>
+                    <p class="leading-relaxed">Texturas creadas mediante el punto. Desde sombras suaves hasta degradados granulosos que aportan volumen.</p>
+                </div>
+                <div class="p-12 hover:bg-pure-black transition-colors duration-500">
+                    <h3 class="font-serif text-3xl text-white mb-6 italic">Dark Art Custom</h3>
+                    <p class="leading-relaxed">Iconografía oscura y agresiva. Diseños personalizados que exploran el lado más crudo del arte.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: GALERIA -->
+    <section id="galeria" class="py-32 bg-pure-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-20">
+                <h2 class="font-serif text-5xl text-white uppercase tracking-tighter italic">Ink on Skin</h2>
+                <div class="w-24 h-1 bg-accent-red mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Imagen 1 -->
+                <div class="relative group aspect-square overflow-hidden bg-dark-gray">
+                    <img src="./public/img/tattoo1.jpg" alt="Tatuaje Blackwork" class="w-full h-full object-cover grayscale brightness-75 group-hover:scale-105 group-hover:brightness-100 transition-all duration-700">
+                    <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-8 text-center">
+                        <p class="text-white text-xs uppercase tracking-widest font-bold">Brazo Completo <br><span class="text-accent-red">Solid Black</span></p>
+                    </div>
+                </div>
+                <!-- Imagen 2 -->
+                <div class="relative group aspect-square overflow-hidden bg-dark-gray">
+                    <img src="./public/img/tattoo2.jpg" alt="Tatuaje Oscuro" class="w-full h-full object-cover grayscale brightness-75 group-hover:scale-105 group-hover:brightness-100 transition-all duration-700">
+                    <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-8 text-center">
+                        <p class="text-white text-xs uppercase tracking-widest font-bold">Torso <br><span class="text-accent-red">Abstract Work</span></p>
+                    </div>
+                </div>
+                <!-- Imagen 3 -->
+                <div class="relative group aspect-square overflow-hidden bg-dark-gray">
+                    <img src="./public/img/tattoo3.jpg" alt="Detalle Dotwork" class="w-full h-full object-cover grayscale brightness-75 group-hover:scale-105 group-hover:brightness-100 transition-all duration-700">
+                    <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-8 text-center">
+                        <p class="text-white text-xs uppercase tracking-widest font-bold">Geometría <br><span class="text-accent-red">Heavy Dotwork</span></p>
+                    </div>
+                </div>
+                <!-- Imagen 4 -->
+                <div class="relative group aspect-square overflow-hidden bg-dark-gray">
+                    <img src="./public/img/tattoo4.jpg" alt="Dark Art" class="w-full h-full object-cover grayscale brightness-75 group-hover:scale-105 group-hover:brightness-100 transition-all duration-700">
+                    <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-8 text-center">
+                        <p class="text-white text-xs uppercase tracking-widest font-bold">Pierna <br><span class="text-accent-red">Dark Art</span></p>
+                    </div>
+                </div>
+                <!-- Imagen 5 -->
+                <div class="relative group aspect-square overflow-hidden bg-dark-gray">
+                    <img src="./public/img/tattoo5.jpg" alt="Dark Art" class="w-full h-full object-cover grayscale brightness-75 group-hover:scale-105 group-hover:brightness-100 transition-all duration-700">
+                    <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-8 text-center">
+                        <p class="text-white text-xs uppercase tracking-widest font-bold">Pierna <br><span class="text-accent-red">Your Ideas</span></p>
+                    </div>
+                </div>
+                <!-- Imagen 6 -->
+                <div class="relative group aspect-square overflow-hidden bg-dark-gray">
+                    <img src="./public/img/tattoo6.jpg" alt="Dark Art" class="w-full h-full object-cover grayscale brightness-75 group-hover:scale-105 group-hover:brightness-100 transition-all duration-700">
+                    <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-8 text-center">
+                        <p class="text-white text-xs uppercase tracking-widest font-bold">Parches <br><span class="text-accent-red">FineLine Art</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: DISPONIBLES -->
+    <section id="disponibles" class="py-32 bg-pure-black border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-20">
+                <h2 class="font-serif text-5xl text-white uppercase tracking-tighter italic">Disponibles</h2>
+                <div class="w-24 h-1 bg-accent-red mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="border border-white/10 p-4 hover:border-accent-red transition-colors group">
+                    <img src="./public/img/flash1.jpg" alt="Flash Design" class="w-full aspect-square object-contain mb-4 grayscale group-hover:grayscale-0 transition-all">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[10px] uppercase font-bold tracking-widest">Ref: #001</span>
+                        <a href="#contacto" class="text-white text-[10px] border-b border-accent-red">Reservar</a>
+                    </div>
+                </div>
+                <div class="border border-white/10 p-4 hover:border-accent-red transition-colors group">
+                    <img src="./public/img/flash2.jpg" alt="Flash Design" class="w-full aspect-square object-contain mb-4 grayscale group-hover:grayscale-0 transition-all">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[10px] uppercase font-bold tracking-widest">Ref: #002</span>
+                        <a href="#contacto" class="text-white text-[10px] border-b border-accent-red">Reservar</a>
+                    </div>
+                </div>
+                <div class="border border-white/10 p-4 hover:border-accent-red transition-colors group">
+                    <img src="./public/img/flash3.jpg" alt="Flash Design" class="w-full aspect-square object-contain mb-4 grayscale group-hover:grayscale-0 transition-all">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[10px] uppercase font-bold tracking-widest">Ref: #003</span>
+                        <a href="#contacto" class="text-white text-[10px] border-b border-accent-red">Reservar</a>
+                    </div>
+                </div>
+                <div class="border border-white/10 p-4 hover:border-accent-red transition-colors group">
+                    <img src="./public/img/flash4.jpg" alt="Flash Design" class="w-full aspect-square object-contain mb-4 grayscale group-hover:grayscale-0 transition-all">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[10px] uppercase font-bold tracking-widest">Ref: #004</span>
+                        <a href="#contacto" class="text-white text-[10px] border-b border-accent-red">Reservar</a>
+                    </div>
+                </div>
+                <div class="border border-white/10 p-4 hover:border-accent-red transition-colors group">
+                    <img src="./public/img/flash5.jpg" alt="Flash Design" class="w-full aspect-square object-contain mb-4 grayscale group-hover:grayscale-0 transition-all">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[10px] uppercase font-bold tracking-widest">Ref: #005</span>
+                        <a href="#contacto" class="text-white text-[10px] border-b border-accent-red">Reservar</a>
+                    </div>
+                </div>
+                <div class="border border-white/10 p-4 hover:border-accent-red transition-colors group">
+                    <img src="./public/img/flash6.jpg" alt="Flash Design" class="w-full aspect-square object-contain mb-4 grayscale group-hover:grayscale-0 transition-all">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[10px] uppercase font-bold tracking-widest">Ref: #006</span>
+                        <a href="#contacto" class="text-white text-[10px] border-b border-accent-red">Reservar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: PROCESO -->
+    <section class="py-32 bg-ink-depth">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20">
+            <div>
+                <h2 class="font-serif text-5xl text-white italic mb-10 leading-tight">El peso del <br>negro.</h2>
+                <p class="text-lg text-gray-500 leading-relaxed">No solo es tinta, es una declaración de intenciones. Mi proceso implica entender cómo el negro va a interactuar con tu anatomía para potenciar las formas naturales del cuerpo.</p>
+            </div>
+            <div class="space-y-12">
+                <div class="flex gap-6">
+                    <span class="text-accent-red font-serif text-4xl">01</span>
+                    <div>
+                        <h4 class="text-white font-bold uppercase tracking-widest mb-2">Conceptualización</h4>
+                        <p class="text-sm">Traducción de tu idea a una composición de alto impacto visual.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6">
+                    <span class="text-accent-red font-serif text-4xl">02</span>
+                    <div>
+                        <h4 class="text-white font-bold uppercase tracking-widest mb-2">Black Packing</h4>
+                        <p class="text-sm">Técnicas especializadas para asegurar un negro uniforme y sólido.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6">
+                    <span class="text-accent-red font-serif text-4xl">03</span>
+                    <div>
+                        <h4 class="text-white font-bold uppercase tracking-widest mb-2">Aftercare Dark</h4>
+                        <p class="text-sm">Guía estricta para que el contraste se mantenga perfecto con los años.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- SECTION 6: SOBRE MI -->
+    <section id="sobre-mi" class="py-32 bg-pure-black grainy-bg">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-20">
+            <div class="w-full md:w-1/2">
+                <img src="./public/img/yo.jpg" alt="Victor" class="w-full grayscale border-l-8 border-accent-red shadow-2xl shadow-black">
+            </div>
+            <div class="w-full md:w-1/2">
+                <h2 class="font-serif text-6xl text-white mb-8 italic lowercase">victor<span class="text-accent-red">.</span></h2>
+                <div class="space-y-6 text-xl font-light">
+                    <p>Soy desarrollador de día y creador de sombras de tarde. Mi obsesión por el <span class="text-white font-bold italic">Blackwork</span> nace de la búsqueda de la pureza y el impacto.</p>
+                    <p>Si buscas líneas finas que desaparecen, no soy tu tatuador. Si buscas piezas que griten, que tengan peso y que definan tu piel con carácter oscuro, hablemos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: TESTIMONIOS -->
+    <section class="py-32 bg-dark-gray">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-1">
+                <div class="bg-pure-black p-12 border border-white/5">
+                    <p class="text-white text-xl italic mb-8">"El negro más sólido que he visto nunca. Un trabajo impecable."</p>
+                    <span class="text-accent-red font-bold uppercase tracking-widest text-xs">Marc Valero</span>
+                </div>
+                <div class="bg-pure-black p-12 border border-white/5">
+                    <p class="text-white text-xl italic mb-8">"Entendió perfectamente el concepto Dark Art que quería. Brutal."</p>
+                    <span class="text-accent-red font-bold uppercase tracking-widest text-xs">Ivan G.</span>
+                </div>
+                <div class="bg-pure-black p-12 border border-white/5">
+                    <p class="text-white text-xl italic mb-8">"Increíble cómo maneja las sombras con el dotwork. Muy profesional."</p>
+                    <span class="text-accent-red font-bold uppercase tracking-widest text-xs">Lucía Torres</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="py-32 bg-pure-black">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-serif text-6xl text-white italic mb-4 uppercase">Sangre & Tinta</h2>
+            <p class="text-gray-500 mb-16 tracking-widest">Reserva tu sesión de blackwork personalizado.</p>
+            
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <div class="md:col-span-1">
+                    <input type="text" placeholder="Tu Nombre" class="w-full bg-dark-gray border-b border-white/20 px-4 py-4 focus:outline-none focus:border-accent-red text-white transition-all">
+                </div>
+                <div class="md:col-span-1">
+                    <input type="email" placeholder="Tu Email" class="w-full bg-dark-gray border-b border-white/20 px-4 py-4 focus:outline-none focus:border-accent-red text-white transition-all">
+                </div>
+                <div class="md:col-span-2">
+                    <textarea placeholder="Describe tu idea (Zona, tamaño, concepto...)" rows="6" class="w-full bg-dark-gray border-b border-white/20 px-4 py-4 focus:outline-none focus:border-accent-red text-white transition-all resize-none"></textarea>
+                </div>
+                <div class="md:col-span-2">
+                    <button class="w-full py-6 bg-accent-red text-white font-black uppercase tracking-[0.5em] hover:bg-white hover:text-black transition-all duration-700">
+                        Entrar en la agenda
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-16 bg-pure-black border-t border-white/5 text-center">
+        <div class="font-serif text-3xl text-white mb-8">TRESPY<span class="text-accent-red">_</span>TATTOO</div>
+        <div class="flex justify-center space-x-12 mb-8 text-xs font-bold uppercase tracking-widest">
+            <a href="#" class="hover:text-accent-red transition-colors">Instagram</a>
+            <a href="#" class="hover:text-accent-red transition-colors">Email</a>
+            <a href="#" class="hover:text-accent-red transition-colors">Telegram</a>
+        </div>
+        <p class="text-[10px] text-gray-700 uppercase tracking-widest italic">© 2026 trespy tattoo. todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./src/main.js"></script>
+</body>
+</html>

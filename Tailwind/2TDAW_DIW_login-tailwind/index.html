@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-slate-900 rounded-3xl p-8 w-full max-w-md border border-slate-800">
+        <form>
+            <!-- Email Field -->
+            <div class="mb-6">
+                <label for="email" class="block text-gray-400 text-sm font-medium mb-2 uppercase tracking-wide">
+                    Email de contacto
+                </label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    placeholder="ejemplo@correo.com"
+                    class="w-full bg-slate-900 border border-red-500 rounded-lg px-4 py-3 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-red-400 transition-colors"
+                >
+                <p class="text-red-500 text-xs italic mt-2">
+                    * Introduce un formato de correo válido.
+                </p>
+            </div>
+
+            <!-- Password Field -->
+            <div class="mb-6">
+                <label for="password" class="block text-gray-400 text-sm font-medium mb-2 uppercase tracking-wide">
+                    Contraseña
+                </label>
+                <input 
+                    type="password" 
+                    id="password"
+                    class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-gray-300 focus:outline-none focus:border-blue-500 transition-colors"
+                >
+            </div>
+
+            <!-- Checkbox -->
+            <div class="mb-6">
+                <label class="flex items-center cursor-pointer">
+                    <input 
+                        type="checkbox" 
+                        class="w-5 h-5 bg-slate-900 border border-slate-700 rounded text-blue-500 focus:ring-0 focus:ring-offset-0 cursor-pointer"
+                    >
+                    <span class="ml-3 text-gray-300 text-sm">
+                        Acepto los términos y condiciones
+                    </span>
+                </label>
+            </div>
+
+            <!-- Submit Button -->
+            <button 
+                type="submit"
+                class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg uppercase tracking-wide transition-colors duration-200"
+            >
+                Empezar ahora
+            </button>
+        </form>
+    </div>
+</body>
+</html>
